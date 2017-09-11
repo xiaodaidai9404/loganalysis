@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from view import hello,index,es_get
+from loganalysis.view import index
 
 urlpatterns = [
     url(r'^$', index),
-    url(r'^es/get/$',es_get)
 ]
