@@ -19,3 +19,4 @@ def index(request):
 @csrf_exempt
 def country_loganalysis(request):
 
+
