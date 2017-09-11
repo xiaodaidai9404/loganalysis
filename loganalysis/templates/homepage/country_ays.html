@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block css%}
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "dist/css/AdminLTE.min.css" %}">
+    <link rel="stylesheet" href="{% static "dist/css/skins/_all-skins.min.css" %}">
+    <link rel="stylesheet" href="{% static "plugins/iCheck/flat/blue.css" %}">
+    <link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "plugins/datatables/dataTables.bootstrap.css"%}">
+
+    <link rel="stylesheet" href="{% static "css/select2.min.css"%}">
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{% static "js/html5shiv.min.js" %}"></script>
+    <script src="{% static "js/respond.min.js" %}"></script>
+    <![endif]-->
+    <style>
+        .nav-tabs {
+            background-color: #eee;
+        }
+        .form-group {
+            margin-top: 25px;
+        }
+    </style>
+
+{% endblock %}
+{% block content %}
+    <div class="fakeloader"></div>
+    <div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            访问国家TOP5
+        </h1>
+
+        <ol class="breadcrumb">
+              <li class="active"><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
+              <li>日志查询</li>
+        </ol>
+    </section>
+         <div class="row">
+                <div class="col-xs-12">
+                    <div id="project-content" class="nav-tabs-custom">
+                        <div class="tab-content">
+                            <div  id="project_manage">
+                                <div class="box-body">
+                                 <form class="box-header" style="padding: 0;">
+{#                                    <div style="margin-bottom: 5px;" class="form-inline">#}
+{#                                        <div style="margin-right: 20px" class="form-group">#}
+{#                                            <label for="">索引</label>#}
+{#                                            <input class="form-control log-index" id="index" name="index" placeholder="索引名字">#}
+{#                                        </div>#}
+{#                                        <div style="margin-right: 20px" class="form-group">#}
+{#                                            <label for="">host搜索</label>#}
+{#                                            <input class="form-control search-host" id="host" type="text" placeholder="host搜索" name="host" value="{{ host|default:'' }}">#}
+{#                                        </div>#}
+{#                                        <div style="margin-right: 20px" class="form-group">#}
+{#                                            <label for="">命令搜索</label>#}
+{#                                            <input class="form-control search-command" id="command" type="text" placeholder="命令搜索" name="command" value="{{ command|default:'' }}">#}
+{#                                        </div>#}
+{#                                        <div style="margin-right: 20px" class="form-group">#}
+{#                                        <button type="button" class="btn btn-success btn-search" onclick="submit_data()">查询</button>#}
+{#                                        </div>#}
+{#                                    </div>#}
+                                </form>
+                                    <table id="StdoutTable" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>国家</th>
+                                            <th>访问量</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            {% for key,value in result.items %}
+                                            <td>{{ key }}</td>
+                                            <td>{{ value }}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+<script src="{%static "plugins/jQuery/jQuery-2.1.4.min.js" %}"></script>
+<script src="{% static "js/jquery-ui.min.js" %}"></script>
+<script src="{%static "dist/js/app.min.js" %}"></script>
+<script src="{% static "plugins/datatables/jquery.dataTables.min.js" %}"></script>
+<script src="{% static "plugins/datatables/dataTables.bootstrap.min.js" %}"></script>
+<script src="{% static "plugins/iCheck/icheck.min.js" %}"></script>
+<script src="{% static "js/myqccr.js" %}"></script>
+<script src="{% static "js/select2.min.js" %}"></script>
+<script src="{% static "js/jquery.Qalert.js" %}"></script>
+{% endblock %}
