@@ -23,5 +23,5 @@ def country_loganalysis(request):
     key_list = redis_action.search_key(date)
     value_list = redis_action.mget_redis(key_list)
     country_dict = dict(map(lambda x, y: [x, y], key_list,value_list))
-    print country_dict
+    print (country_dict)
     return render(request, 'homepage/index.html')
