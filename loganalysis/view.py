@@ -14,3 +14,8 @@ from django.contrib.auth.decorators import login_required
 @csrf_exempt
 def index(request):
     return render(request,'homepage/index.html')
+
+
+@csrf_exempt
+def country_loganalysis(request):
+
