@@ -1,0 +1,21 @@
+<html>
+ <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title> 两种方式给列表增加自动增长序号列 </title>
+ </head>
+<script>
+    var i=1;
+</script>
+ <body>
+ <h4>第一种方式：用JS实现</h4>
+  <table>
+    <tr><th>序号</th><th>列字段</th></tr>
+    <l:iterate property="objs" id="objs1"><!-- 遍历数据集，生成行记录-->
+    <tr>
+        <td><script>document.write(i);i++</script></td>
+        <td>测试1</td>
+    </tr>
+    </l:iterate>
+  </table>
+ </body>
+</html>

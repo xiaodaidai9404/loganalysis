@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{%load staticfiles%}
+
+{% block css%}
+	<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "dist/css/AdminLTE.min.css" %}">
+	<link rel="stylesheet" href="{% static "dist/css/skins/_all-skins.min.css" %}">
+	<link rel="stylesheet" href="{% static "plugins/iCheck/flat/blue.css" %}">
+	<link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
+ 	<link rel="stylesheet" href="{% static "plugins/datatables/dataTables.bootstrap.css"%}">
+    <link rel="stylesheet" href="{%static "css/select2.min.css" %}">
+{#	<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />#}
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="{% static "js/html5shiv.min.js" %}"></script>
+        <script src="{% static "js/respond.min.js" %}"></script>
+    <![endif]-->
+    <style>
+    .head-box{min-height:180px;}
+    #svn-content{display: none}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+    <div class="row">
+            <!-- /.box -->
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">redis操作</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                    class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i
+                                    class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <form method="post" id="redisaction">
+                    <div class="box-body">
+                        <p id="considerations" style="color:red"></p>
+                        <textarea id="redis" class="form-control" rows="10"></textarea>
+                        <button type="button" class="btn btn-primary" name="redis_action" onclick="action_redis()"><i class="fa fa-fw fa-check"></i>执行</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+        <div class="row" id="action_value" style="display:none;">
+            <!-- /.box -->
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">执行结果</h3>
+                    </div>
+                    <div class="box-body">
+                        <p id="considerations" style="color:red"></p>
+                        <textarea id="redis_output" class="form-control" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+        <script>
+        function action_redis() {
+            var data = $('#redis').val();
+            var c = confirm("确定执行该操作？");
+            if (c == true) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/action/redis/",
+                    data: {"data": data,'csrfmiddlewaretoken': getCookie('csrftoken')},
+                    success: function (result) {
+                        if (result.code == 200) {
+                            document.getElementById('action_value').style.display='block';//action_value的display属性设置为block（显示）
+                            x=document.getElementById("redis_output")  //查找元素
+                        x.innerHTML=(result.message);    //改变内容
+                        }
+                        else {
+                            alert(result.message);
+                        }
+                    }
+                })
+            }
+        }
+    </script>
+{% endblock %}

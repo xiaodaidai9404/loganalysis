@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2ac13c78-d2da-4c70-84f3-16f2e388aa9e" name="日志分析" url="http://172.30.197.183">
+        <fileTransfer host="172.30.197.183" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/data/django/loganalysis" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
