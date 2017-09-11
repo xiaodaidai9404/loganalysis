@@ -21,8 +21,9 @@ def index(request):
 def country_loganalysis(request):
     date = '2017-09-09'
     key_list = redis_action.search_key(date)
-    print key_list
+    print (key_list)
     country_list = map(lambda x:x.split('_')[1], key_list)
+    print (country_list)
     value_list = redis_action.mget_redis(key_list)
     country_dict = dict(map(lambda x, y: [x, y], country_list,value_list))
     print (country_dict)
