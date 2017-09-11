@@ -35,13 +35,15 @@
         <li id="qccrdomain" class="treeview">
             <a href="#">
                 <i class="fa fa-key"></i>
-                <span>线下redis</span>
+                <span>日志分析</span>
                 <span class="label label-primary pull-right">0</span>
             </a>
             <ul class="treeview-menu">
-                <li id="serverconf"><a href="/"><i class="fa fa-circle-o"></i>redis server 配置</a>
+                <li id="servercounter"><a href="/loganalysis/counter"><i class="fa fa-circle-o"></i>访问国家统计</a>
                 </li>
-                <li id="serveraction"><a href="/action/redis"><i class="fa fa-circle-o"></i>redis操作</a>
+                <li id="servercode"><a href="/loganalysis/httpcode"><i class="fa fa-circle-o"></i>http_code统计</a>
+                </li>
+                <li id="serverslowurl"><a href="/loganalysis/slowurl"><i class="fa fa-circle-o"></i>慢url查询</a>
                 </li>
             </ul>
         </li>

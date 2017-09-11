@@ -30,51 +30,51 @@
             margin-top: 25px;
         }
     </style>
-    <script type="text/javascript">
-        function submit_data() {
-            var index = $('#index').val();
-            var host = $('#host').val();
-            var command = $('#command').val();
-                $.ajax({
-                    type: "POST",
-                    dataType: "json",
-                    url: "/es/get/",
-                    data: {"index": index, "host": host, "command": command, 'csrfmiddlewaretoken': getCookie('csrftoken')},
-                    success: function (response) {
-                        if (response.code == 200) {
+{#    <script type="text/javascript">#}
+{#        function submit_data() {#}
+{#            var index = $('#index').val();#}
+{#            var host = $('#host').val();#}
+{#            var command = $('#command').val();#}
+{#                $.ajax({#}
+{#                    type: "POST",#}
+{#                    dataType: "json",#}
+{#                    url: "/es/get/",#}
+{#                    data: {"index": index, "host": host, "command": command, 'csrfmiddlewaretoken': getCookie('csrftoken')},#}
+{#                    success: function (response) {#}
+{#                        if (response.code == 200) {#}
                             {#                            console.log(response);#}
                             {#                            定义tbody以及将tbody追加为空#}
-                            var tbody = $("#StdoutTable tbody");
-                            tbody.html('');
+{#                            var tbody = $("#StdoutTable tbody");#}
+{#                            tbody.html('');#}
                             {#                            插入数据#}
-
-                            if ($('#StdoutTable').hasClass('dataTable')) {
-                                var dttable = $('#StdoutTable').dataTable();
-                                dttable.fnClearTable(); //清空一下table
-                                dttable.fnDestroy(); //还原初始化了的datatable
-                            }
-                            for (var item of response.result) {
-                                var tr = `
-                                <tr role="row" class="">
-                                    <td>${item._source.endtime}</td>
-                                    <td>${item._source.loginip }</td>
-                                    <td>${ item._source.serverip }</td>
-                                    <td>${  item._source.user }</td>
-                                    <td>${  item._source.dir }</td>
-                                    <td>${  item._source.command }</td>
-                                </tr>`;
-                                tbody.append($(tr));
-                            }
-                            $('#StdoutTable').dataTable();
-                        }
-                        else {
-                            alert(response.msg);
-                        }
-                    }
-                })
-
-        }
-</script>
+{##}
+{#                            if ($('#StdoutTable').hasClass('dataTable')) {#}
+{#                                var dttable = $('#StdoutTable').dataTable();#}
+{#                                dttable.fnClearTable(); //清空一下table#}
+{#                                dttable.fnDestroy(); //还原初始化了的datatable#}
+{#                            }#}
+{#                            for (var item of response.result) {#}
+{#                                var tr = `#}
+{#                                <tr role="row" class="">#}
+{#                                    <td>${item._source.endtime}</td>#}
+{#                                    <td>${item._source.loginip }</td>#}
+{#                                    <td>${ item._source.serverip }</td>#}
+{#                                    <td>${  item._source.user }</td>#}
+{#                                    <td>${  item._source.dir }</td>#}
+{#                                    <td>${  item._source.command }</td>#}
+{#                                </tr>`;#}
+{#                                tbody.append($(tr));#}
+{#                            }#}
+{#                            $('#StdoutTable').dataTable();#}
+{#                        }#}
+{#                        else {#}
+{#                            alert(response.msg);#}
+{#                        }#}
+{#                    }#}
+{#                })#}
+{##}
+{#        }#}
+{#</script>#}
 
 {% endblock %}
 {% block content %}
