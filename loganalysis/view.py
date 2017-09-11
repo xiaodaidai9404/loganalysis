@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+import redis_action
 
 @csrf_exempt
 def index(request):
@@ -18,5 +19,9 @@ def index(request):
 
 @csrf_exempt
 def country_loganalysis(request):
-
-
+    date = '2017-09-09'
+    key_list = redis_action.search_key(date)
+    value_list = redis_action.mget_redis(key_list)
+    country_dict = dict(map(lambda x, y: [x, y], key_list,value_list))
+    print country_dict
+    return render(request, 'homepage/index.html')
