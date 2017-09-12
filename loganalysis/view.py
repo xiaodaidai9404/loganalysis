@@ -30,6 +30,6 @@ def country_get(request):
     country_list = map(lambda x:bytes.decode(x).split('_')[1], key_list)
     print (country_list)
     value_list = redis_action.mget_redis(key_list)
-    country_dict = dict(map(lambda x, y: [x, bytes.decode(y).split('_')[1]], country_list,value_list))
+    country_dict = dict(map(lambda x, y: [x, bytes.decode(y).split('_')[0]], country_list,value_list))
     print (country_dict)
     return HttpResponse(json.dumps({"code": 200, "result": country_dict}))
