@@ -19,7 +19,8 @@ def index(request):
 
 @csrf_exempt
 def country_loganalysis(request):
-    date = '2017-09-09'
+    post_data = request.POST
+    date = post_data.get('search_date')
     key_list = redis_action.search_key(date)
     print (key_list)
     country_list = map(lambda x:bytes.decode(x).split('_')[1], key_list)
@@ -27,4 +28,5 @@ def country_loganalysis(request):
     value_list = redis_action.mget_redis(key_list)
     country_dict = dict(map(lambda x, y: [x, y], country_list,value_list))
     print (country_dict)
-    return render(request, 'homepage/country_ays.html',{"result": country_dict})
+    return HttpResponse(json.dumps({"code": 200, "result": country_dict}))
+    # return render(request, 'homepage/country_ays.html',{"result": country_dict})
