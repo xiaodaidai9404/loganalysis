@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static "plugins/iCheck/flat/blue.css" %}">
     <link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
     <link rel="stylesheet" href="{% static "plugins/datatables/dataTables.bootstrap.css"%}">
-
+    <link rel="stylesheet" href="{% static "bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"%}">
     <link rel="stylesheet" href="{% static "css/select2.min.css"%}">
     <link rel="stylesheet" href="{% static "css/style.css"%}">
 
@@ -52,7 +52,7 @@
                             <div  id="project_manage">
                                 <div class="box-body">
                                  <form class="box-header" style="padding: 0;">
-                                     <input class="form_datetime form-control" type="text" value="2016-03-07" size="16">
+                                     <input class="form_datetime form-control" type="text" size="16">
 {#                                        <button type="button" class="btn btn-success btn-search" onclick="submit_data()">查询</button>#}
                                 </form>
                                     <table id="StdoutTable" class="table table-bordered table-striped">
@@ -97,6 +97,7 @@
  });
 </script>
     <script src="{% static "js/jquery-ui.min.js" %}"></script>
+    <script src="{% static "bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" %}"></script>
 <script src="{%static "dist/js/app.min.js" %}"></script>
 <script src="{% static "plugins/datatables/jquery.dataTables.min.js" %}"></script>
 <script src="{% static "plugins/datatables/dataTables.bootstrap.min.js" %}"></script>
