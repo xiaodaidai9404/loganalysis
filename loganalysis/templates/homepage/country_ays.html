@@ -38,36 +38,36 @@
                 dataType: "json",
                 url: "/get/country/",
                 data: {"search_date": search_date, 'csrfmiddlewaretoken': getCookie('csrftoken')},
-                {#                    success: function (response) {#}
-                {#                        if (response.code == 200) {#}
-                {#                            console.log(response);#}
-                {#                            定义tbody以及将tbody追加为空#}
-                {#                            var tbody = $("#StdoutTable tbody");#}
-                {#                            tbody.html('');#}
-                {#                            插入数据#}
-                {##}
-                {#                            if ($('#StdoutTable').hasClass('dataTable')) {#}
-                {#                                var dttable = $('#StdoutTable').dataTable();#}
-                {#                                dttable.fnClearTable(); //清空一下table#}
-                {#                                dttable.fnDestroy(); //还原初始化了的datatable#}
-                {#                            }#}
-                {#                            for (var key item of response.result.items) {#}
-                {#                                var tr = `#}
-                {#                                <tr role="row" class="">#}
-                {#                                    <td>${key}</td>#}
-                {#                                    <td>${item}</td>#}
-                {#                                </tr>`;#}
-                {#                                tbody.append($(tr));#}
-                {#                            }#}
-                {#                            $('#StdoutTable').dataTable();#}
-                {#                        }#}
-                {#                        else {#}
-                {#                            alert(response.msg);#}
-                {#                        }#}
-                {#                    }#}
-                {#                })#}
+                                    success: function (response) {
+                                        if (response.code == 200) {
+                                            console.log(response);
+                                            定义tbody以及将tbody追加为空
+                                            var tbody = $("#StdoutTable tbody");
+                                            tbody.html('');
+                                            插入数据
 
-            })
+                                            if ($('#StdoutTable').hasClass('dataTable')) {
+                                                var dttable = $('#StdoutTable').dataTable();
+                                                dttable.fnClearTable(); //清空一下table
+                                                dttable.fnDestroy(); //还原初始化了的datatable
+                                            }
+                                            for (var key item of response.result.items) {
+                                                var tr = `
+                                                <tr role="row" class="">
+                                                    <td>${key}</td>
+                                                    <td>${item}</td>
+                                                </tr>`;
+                                                tbody.append($(tr));
+                                            }
+                                            $('#StdoutTable').dataTable();
+                                        }
+                                        else {
+                                            alert(response.msg);
+                                        }
+                                    }
+                                })
+{##}
+{#            })#}
         }
 </script>
 {% endblock %}
@@ -147,7 +147,7 @@
     minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
      });
     </script>
-    <script type="text/javascript">
-    $('#StdoutTable').DataTable();
-</script>
+{#    <script type="text/javascript">#}
+{#    $('#StdoutTable').DataTable();#}
+{#</script>#}
 {% endblock %}
