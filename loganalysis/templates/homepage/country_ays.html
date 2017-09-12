@@ -52,23 +52,8 @@
                             <div  id="project_manage">
                                 <div class="box-body">
                                  <form class="box-header" style="padding: 0;">
-{#                                    <div style="margin-bottom: 5px;" class="form-inline">#}
-{#                                        <div style="margin-right: 20px" class="form-group">#}
-{#                                            <label for="">索引</label>#}
-{#                                            <input class="form-control log-index" id="index" name="index" placeholder="索引名字">#}
-{#                                        </div>#}
-{#                                        <div style="margin-right: 20px" class="form-group">#}
-{#                                            <label for="">host搜索</label>#}
-{#                                            <input class="form-control search-host" id="host" type="text" placeholder="host搜索" name="host" value="{{ host|default:'' }}">#}
-{#                                        </div>#}
-{#                                        <div style="margin-right: 20px" class="form-group">#}
-{#                                            <label for="">命令搜索</label>#}
-{#                                            <input class="form-control search-command" id="command" type="text" placeholder="命令搜索" name="command" value="{{ command|default:'' }}">#}
-{#                                        </div>#}
-{#                                        <div style="margin-right: 20px" class="form-group">#}
+                                     <input class="form_datetime form-control" type="text" value="2016-03-07" size="16">
 {#                                        <button type="button" class="btn btn-success btn-search" onclick="submit_data()">查询</button>#}
-{#                                        </div>#}
-{#                                    </div>#}
                                 </form>
                                     <table id="StdoutTable" class="table table-bordered table-striped">
                                         <thead>
@@ -98,7 +83,20 @@
 
 {% block js %}
 <script src="{%static "plugins/jQuery/jQuery-2.1.4.min.js" %}"></script>
-<script src="{% static "js/jquery-ui.min.js" %}"></script>
+    <script type="text/javascript">
+ $(".form_datetime").datetimepicker({
+ format: "yyyy-mm-dd",
+ autoclose: true,
+ todayBtn: true,
+ todayHighlight: true,
+ showMeridian: true,
+ pickerPosition: "bottom-left",
+ language: 'zh-CN',//中文，需要引用zh-CN.js包
+ startView: 2,//月视图
+ minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
+ });
+</script>
+    <script src="{% static "js/jquery-ui.min.js" %}"></script>
 <script src="{%static "dist/js/app.min.js" %}"></script>
 <script src="{% static "plugins/datatables/jquery.dataTables.min.js" %}"></script>
 <script src="{% static "plugins/datatables/dataTables.bootstrap.min.js" %}"></script>
