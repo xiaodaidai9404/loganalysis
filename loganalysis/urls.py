@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from loganalysis.view import index,country_loganalysis
+from loganalysis.view import index,country_loganalysis,country_get
 
 urlpatterns = [
     url(r'^$', index),
-    url(r'^loganalysis/country/$', country_loganalysis)
+    url(r'^loganalysis/country/$', country_loganalysis),
+    url(r'^get/country/$', country_get)
 ]

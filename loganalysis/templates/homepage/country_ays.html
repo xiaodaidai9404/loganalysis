@@ -39,7 +39,7 @@
                 $.ajax({
                     type: "POST",
                     dataType: "json",
-                    url: "/loganalysis/country/",
+                    url: "/get/country/",
                     data: {"search_date":search_date, 'csrfmiddlewaretoken': getCookie('csrftoken')},
                     success: function (response) {
                         if (response.code == 200) {
