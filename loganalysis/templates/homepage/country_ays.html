@@ -51,11 +51,11 @@
                                                 dttable.fnClearTable(); //清空一下table
                                                 dttable.fnDestroy(); //还原初始化了的datatable
                                             }
-                                            for (var key item of response.result.items) {
-                                                var tr = `
+                                            for (var key in response.result) {
+                                                var tr =`
                                                 <tr role="row" class="">
                                                     <td>${key}</td>
-                                                    <td>${item}</td>
+                                                    <td>${response.result[item]}</td>
                                                 </tr>`;
                                                 tbody.append($(tr));
                                             }
@@ -66,8 +66,6 @@
                                         }
                                     }
                                 })
-{##}
-{#            })#}
         }
 </script>
 {% endblock %}
