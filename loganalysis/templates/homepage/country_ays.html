@@ -33,20 +33,6 @@
 
 {% endblock %}
 
-    <script type="text/javascript">
-    $('.form_datetime').datetimepicker({
-    format: "yyyy-mm-dd",
-    autoclose: true,
-    todayBtn: true,
-    todayHighlight: true,
-    showMeridian: true,
-    pickerPosition: "bottom-left",
-    language: 'zh-CN',//中文，需要引用zh-CN.js包
-    startView: 2,//月视图
-    minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
-     });
-    </script>
-
 {% block content %}
     <div class="fakeloader"></div>
     <div class="content-wrapper">
@@ -108,4 +94,16 @@
 <script src="{% static "js/myqccr.js" %}"></script>
 <script src="{% static "js/select2.min.js" %}"></script>
 <script src="{% static "js/jquery.Qalert.js" %}"></script>
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+    format: "yyyy-mm-dd",
+    autoclose: true,
+    todayBtn: true,
+    todayHighlight: true,
+    showMeridian: true,
+    pickerPosition: "bottom-left",
+    startView: 2,//月视图
+    minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
+     });
+    </script>
 {% endblock %}
