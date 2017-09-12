@@ -33,46 +33,6 @@
 
 {% endblock %}
 
-<script type="text/javascript">
-        function search_country_data() {
-            var search_date = $('#search_date').val();
-                $.ajax({
-                    type: "POST",
-                    dataType: "json",
-                    url: "/get/country/",
-                    data: {"search_date":search_date, 'csrfmiddlewaretoken': getCookie('csrftoken')},
-                    success: function (response) {
-                        if (response.code == 200) {
-                            {#                            console.log(response);#}
-                            {#                            定义tbody以及将tbody追加为空#}
-                            var tbody = $("#StdoutTable tbody");
-                            tbody.html('');
-                            {#                            插入数据#}
-
-                            if ($('#StdoutTable').hasClass('dataTable')) {
-                                var dttable = $('#StdoutTable').dataTable();
-                                dttable.fnClearTable(); //清空一下table
-                                dttable.fnDestroy(); //还原初始化了的datatable
-                            }
-                            for (var key item of response.result.items) {
-                                var tr = `
-                                <tr role="row" class="">
-                                    <td>${key}</td>
-                                    <td>${item}</td>
-                                </tr>`;
-                                tbody.append($(tr));
-                            }
-                            $('#StdoutTable').dataTable();
-                        }
-                        else {
-                            alert(response.msg);
-                        }
-                    }
-                })
-
-        }
-</script>
-
 {% block content %}
     <div class="fakeloader"></div>
     <div class="content-wrapper">
@@ -150,5 +110,44 @@
     </script>
     <script type="text/javascript">
     $('#StdoutTable').DataTable();
+</script>
+    <script type="text/javascript">
+        function search_country_data() {
+            var search_date = $('#search_date').val();
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/get/country/",
+                    data: {"search_date":search_date, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+                    success: function (response) {
+                        if (response.code == 200) {
+                            {#                            console.log(response);#}
+                            {#                            定义tbody以及将tbody追加为空#}
+                            var tbody = $("#StdoutTable tbody");
+                            tbody.html('');
+                            {#                            插入数据#}
+
+                            if ($('#StdoutTable').hasClass('dataTable')) {
+                                var dttable = $('#StdoutTable').dataTable();
+                                dttable.fnClearTable(); //清空一下table
+                                dttable.fnDestroy(); //还原初始化了的datatable
+                            }
+                            for (var key item of response.result.items) {
+                                var tr = `
+                                <tr role="row" class="">
+                                    <td>${key}</td>
+                                    <td>${item}</td>
+                                </tr>`;
+                                tbody.append($(tr));
+                            }
+                            $('#StdoutTable').dataTable();
+                        }
+                        else {
+                            alert(response.msg);
+                        }
+                    }
+                })
+
+        }
 </script>
 {% endblock %}

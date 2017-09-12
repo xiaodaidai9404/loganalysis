@@ -59,8 +59,8 @@
       <file leaf-file-name="country_ays.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+            <state relative-caret-position="383">
+              <caret line="146" column="25" lean-forward="true" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -821,7 +821,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505214610461</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="####">
+      <created>1505214726182</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1505214726182</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1240,8 +1247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+        <state relative-caret-position="383">
+          <caret line="146" column="25" lean-forward="true" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
           <folding />
         </state>
       </provider>
