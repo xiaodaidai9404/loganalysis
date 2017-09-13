@@ -18,7 +18,7 @@ def yester_contrast(date1,num):
     获取昨天的时间
     """
     date_time = datetime.datetime.strptime(date1, '%Y-%m-%d')
-    yes_time = date_time - datetime.timedelta(days=num)
+    yes_time = date_time - datetime.timedelta(days=int(num))
     yes_date = yes_time.strftime('%Y-%m-%d')
 
     key_list = search_key(date1)
@@ -31,5 +31,7 @@ def yester_contrast(date1,num):
     value_list1 = mget_redis(key_list1)
     country_dict1 = dict(map(lambda x, y: [x, bytes.decode(y).split('_')[0]], country_list1, value_list1))
 
-    print country_dict,print country_dict1
+    print (country_dict,country_dict1)
+
+print (yester_contrast('2017-09-12',1))
 
