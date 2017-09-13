@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'loganalysis.wsgi.application'
  #       'ENGINE': 'django.db.backends.mysql',
  #       'NAME': 'loganalysis',
  #       'USER': 'root',
- #       'PASSWORD': 'xiongqian0610',
+ #       'PASSWORD': '**********',
  #       'HOST': 'localhost',
  #       'PORT': '3306',
  #   }
