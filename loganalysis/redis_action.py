@@ -33,12 +33,12 @@ def yester_contrast(date1):
         value = bytes.decode(get_redis(key)).split('_')[0]
         yes_key = str(yes_date)+'_'+str(country)
         yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
-        week_ago_key = str(week_ago_date)+'_'+str(country)
-        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+#        week_ago_key = str(week_ago_date)+'_'+str(country)
+#        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
         Dict['country']=country
         Dict['value']=value
         Dict['yes_value']=yes_value
-        Dict['week_ago_value']=week_ago_value
-        result.append[Dict]
+#        Dict['week_ago_value']=week_ago_value
+        result.append(Dict)
     return result
 

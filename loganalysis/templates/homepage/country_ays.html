@@ -117,11 +117,12 @@
                                                 dttable.fnClearTable(); //清空一下table
                                                 dttable.fnDestroy(); //还原初始化了的datatable
                                             }
-                                            for (var key in response.result) {
+                                            for (var item of response.result) {
                                                 var tr =`
                                                 <tr role="row" class="">
-                                                    <td>${key}</td>
-                                                    <td>${response.result[key]}</td>
+                                                    <td>${item.country}</td>
+                                                    <td>${item.value}</td>
+                                                    <td>${item.yes_value}</td>
                                                 </tr>`;
                                                 tbody.append($(tr));
                                             }
@@ -166,6 +167,8 @@
                                         <tr>
                                             <th>国家</th>
                                             <th>访问量</th>
+                                            <th>昨天访问量</th>
+{#                                            <th>七天前访问量</th>#}
                                         </tr>
                                         </thead>
                                         <tbody>
