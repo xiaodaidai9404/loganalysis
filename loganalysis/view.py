@@ -27,3 +27,13 @@ def country_get(request):
     date1 = post_data.get('search_date')
     result = redis_action.yester_contrast(date1)
     return HttpResponse(json.dumps({"code": 200, "result": result}))
+
+@csrf_exempt
+def http_code_loganalysis(rreequest):
+    return render(request,'homepage/http_code_ays.html')
+
+@csrf_exempt
+def http_code_get(request):
+    post_data = request.POST
+    date1 = post_data.get('search_date')
+    result =
