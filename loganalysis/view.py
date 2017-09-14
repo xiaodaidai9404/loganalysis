@@ -36,4 +36,5 @@ def http_code_loganalysis(rreequest):
 def http_code_get(request):
     post_data = request.POST
     date1 = post_data.get('search_date')
-    result =
+    result = redis_action.yester_http_code(date1)
+    return HttpResponse(json.dumps({"code": 200, "result": result}))
