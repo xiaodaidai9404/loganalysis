@@ -24,6 +24,6 @@ def country_loganalysis(request):
 @csrf_exempt
 def country_get(request):
     post_data = request.POST
-    date = post_data.get('search_date')
-    result = redis_action.yester_contrast('date')
+    date1 = post_data.get('search_date')
+    result = redis_action.yester_contrast(date1)
     return HttpResponse(json.dumps({"code": 200, "result": result}))
