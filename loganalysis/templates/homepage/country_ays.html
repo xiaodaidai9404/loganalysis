@@ -80,11 +80,12 @@
                         dttable.fnClearTable(); //清空一下table
                         dttable.fnDestroy(); //还原初始化了的datatable
                     }
-                    for (var key in response.result) {
+                    for (var item of response.result) {
                         var tr = `
-                                                <tr role="row" class="">
-                                                    <td>${key}</td>
-                                                    <td>${response.result[key]}</td>
+                        <tr role="row" class="">
+                                                    <td>${item.country}</td>
+                                                    <td>${item.value}</td>
+                                                    <td>${item.yes_value}</td>
                                                 </tr>`;
                         tbody.append($(tr));
                     }
