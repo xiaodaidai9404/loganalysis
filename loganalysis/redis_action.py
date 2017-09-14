@@ -26,10 +26,12 @@ def yester_contrast(date1):
 
     result = []
 
-    key_list = search_key(date1)
+    date_key = str(date1)+"_country_"
+
+    key_list = search_key(date_key)
     for key in key_list:
         Dict = {}
-        country = bytes.decode(key).split('_')[1]
+        country = bytes.decode(key).split('_')[2]
         value = bytes.decode(get_redis(key)).split('_')[0]
         yes_key = str(yes_date)+'_'+str(country)
         yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
