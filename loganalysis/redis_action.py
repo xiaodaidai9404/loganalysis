@@ -17,7 +17,6 @@ def yester_contrast(date1):
     """
     获取昨天的时间
     """
-    print date1
     date_time = datetime.datetime.strptime(date1, '%Y-%m-%d')
     yes_time = date_time - datetime.timedelta(days=1)
     yes_date = yes_time.strftime('%Y-%m-%d')
