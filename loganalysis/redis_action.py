@@ -12,26 +12,33 @@ def get_redis(key):
 def mget_redis(key_list):
     return r.mget(key_list)
 
-def yester_contrast(date1,num):
+def yester_contrast(date1):
     import datetime
     """
     获取昨天的时间
     """
     date_time = datetime.datetime.strptime(date1, '%Y-%m-%d')
-    yes_time = date_time - datetime.timedelta(days=int(num))
+    yes_time = date_time - datetime.timedelta(days=1)
     yes_date = yes_time.strftime('%Y-%m-%d')
 
+    week_ago_time = date_time - datetime.timedelta(days=7)
+    week_ago_date = week_ago_time.strftime('%Y-%m-%d')
+
+    result = []
+
     key_list = search_key(date1)
-    country_list = map(lambda x: bytes.decode(x).split('_')[1], key_list)
-    value_list = mget_redis(key_list)
-    country_dict = dict(map(lambda x, y: [x, bytes.decode(y).split('_')[0]], country_list, value_list))
-
-    key_list1 = search_key(yes_date)
-    country_list1 = map(lambda x: bytes.decode(x).split('_')[1], key_list1)
-    value_list1 = mget_redis(key_list1)
-    country_dict1 = dict(map(lambda x, y: [x, bytes.decode(y).split('_')[0]], country_list1, value_list1))
-
-    print (country_dict,country_dict1)
-
-print (yester_contrast('2017-09-12',1))
+    for key in key_list:
+        Dict = {}
+        country = bytes.decode(key).split('_')[1]
+        value = bytes.decode(get_redis(key)).split('_')[0]
+        yes_key = str(yes_date)+'_'+str(country)
+        yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
+        week_ago_key = str(week_ago_date)+'_'+str(country)
+        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+        Dict['country']=country
+        Dict['value']=value
+        Dict['yes_value']=yes_value
+        Dict['week_ago_value']=week_ago_value
+        result.append[Dict]
+    return result
 
