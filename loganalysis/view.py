@@ -29,7 +29,7 @@ def country_get(request):
     return HttpResponse(json.dumps({"code": 200, "result": result}))
 
 @csrf_exempt
-def http_code_loganalysis(rreequest):
+def http_code_loganalysis(request):
     return render(request,'homepage/http_code_ays.html')
 
 @csrf_exempt
