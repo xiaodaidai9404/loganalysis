@@ -32,14 +32,6 @@
 
     </style>
         <script type="text/javascript">
-        $("[data-toggle='popover']").popover({
-        html : true,
-        title: 'test',
-        delay:{show:500, hide:1000},
-        content: function() {
-          return 'test';
-        }
-        })
                 /**
         *对Date的扩展，将 Date 转化为指定格式的String
         *月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
@@ -90,7 +82,7 @@
                     for (var item of response.result) {
                         var tr = `
                         <tr role="row" class="">
-                                                    <td><a href="#" class="bind_hover_card" data-toggle="popover" data-placement="bottom" data-trigger="hover">${item.http_code}</a></td>
+                                                    <td><a href="#" data-toggle="popover" title="top 5 url" data-placement="right" data-trigger="hover">${item.http_code}</a></td>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
                                                 </tr>`;
@@ -128,7 +120,7 @@
                                             for (var item of response.result) {
                                                 var tr =`
                                                 <tr role="row" class="">
-                                                    <td><a href="#" class="bind_hover_card" data-toggle="popover" data-placement="bottom" data-trigger="hover">${item.http_code}</a></td>
+                                                    <td><a href="#" data-toggle="popover" title="top 5 url" data-placement="right" data-trigger="hover">${item.http_code}</a></td>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
                                                 </tr>`;
@@ -222,6 +214,11 @@
     startView: 2,//月视图
     minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
      });
+    </script>
+    <script>
+$(function (){
+    $("[data-toggle='popover']").popover();
+});
     </script>
 {#    <script type="text/javascript">#}
 {#    $('#StdoutTable').DataTable();#}
