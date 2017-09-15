@@ -72,8 +72,8 @@
       <file leaf-file-name="http_code_ays.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="90" column="56" lean-forward="true" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
+            <state relative-caret-position="446">
+              <caret line="135" column="56" lean-forward="true" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -590,13 +590,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00036" summary="####">
-      <created>1505214726182</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1505214726182</updated>
-    </task>
     <task id="LOCAL-00037" summary="####">
       <created>1505214833972</created>
       <option name="number" value="00037" />
@@ -933,7 +926,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505474196874</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="####">
+      <created>1505474686930</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1505474686930</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1357,8 +1357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="90" column="56" lean-forward="true" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
+        <state relative-caret-position="446">
+          <caret line="135" column="56" lean-forward="true" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="56" />
           <folding />
         </state>
       </provider>
