@@ -16,6 +16,8 @@ import loganalysis.redis_action as redis_action
 def index(request):
     return render(request,'homepage/index.html')
 
+def test(request):
+    return render(request,'test.html')
 
 @csrf_exempt
 def country_loganalysis(request):
