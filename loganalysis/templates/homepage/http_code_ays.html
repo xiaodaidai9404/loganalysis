@@ -82,7 +82,7 @@
                     for (var item of response.result) {
                         var tr = `
                         <tr role="row">
-                                                    <td><a id="code" title="Popover title"
+                                                    <td><a id="code" class="popover-show title="Popover title"
             data-container="body" data-toggle="popover" data-placement="left"
             data-content="左侧的 Popover 中的一些内容">${item.http_code}</a></td>
                                                     <td>${item.value}</td>
@@ -122,8 +122,8 @@
                                             for (var item of response.result) {
                                                 var tr =`
                                                 <tr role="row">
-                                                <td><a id="code" title="Popover title"
-                                                data-container="body" data-toggle="popover" data-placement="left"
+                                                <td><a id="code" class="popover-show" title="Popover title"
+                                                data-container="body" data-toggle="popover" data-placement="rgiht"
                                                 data-content="左侧的 Popover 中的一些内容">${item.http_code}</a></td>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
@@ -141,7 +141,7 @@
 
 </script>
     <script>
-     setTimeout(function (){ $("#code").popover("show");},4000);
+     $(function () { $('.popover-show').popover('show');});
   </script>
 {% endblock %}
 
