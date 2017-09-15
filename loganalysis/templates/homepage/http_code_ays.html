@@ -82,9 +82,14 @@
                     for (var item of response.result) {
                         var tr = `
                         <tr role="row">
-                                                    <td><a id="code" class="popover-show title="Popover title"
-            data-container="body" data-toggle="popover" data-placement="left"
-            data-content="左侧的 Popover 中的一些内容">${item.http_code}</a></td>
+                                                <div class="container" style="padding: 100px 50px 10px;" >
+                                                 <td><a title="Popover title"
+                                                  data-container="body" data-toggle="popover" data-placement="left"
+                                                    data-content="左侧的 Popover 中的一些内容">
+                                                    {item.http_code}
+                                                   </a>
+                                                   </td>
+                                                   </div>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
                                                 </tr>`;
@@ -122,9 +127,14 @@
                                             for (var item of response.result) {
                                                 var tr =`
                                                 <tr role="row">
-                                                <td><a id="code" class="popover-show" title="Popover title"
-                                                data-container="body" data-toggle="popover" data-placement="rgiht"
-                                                data-content="左侧的 Popover 中的一些内容">${item.http_code}</a></td>
+                                                <div class="container" style="padding: 100px 50px 10px;" >
+                                                 <td><a title="Popover title"
+                                                  data-container="body" data-toggle="popover" data-placement="left"
+                                                    data-content="左侧的 Popover 中的一些内容">
+                                                    {item.http_code}
+                                                   </a>
+                                                   </td>
+                                                   </div>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
                                                 </tr>`;
@@ -211,6 +221,11 @@
 <script src="{% static "js/myqccr.js" %}"></script>
 <script src="{% static "js/select2.min.js" %}"></script>
 <script src="{% static "js/jquery.Qalert.js" %}"></script>
+<script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
+<script>
+    $(function () { $("[data-toggle='popover']").popover(); });
+</script>
+<script src="{% static "js/jquery.Qalert.js" %}"></script>
     <script type="text/javascript">
     $('.form_datetime').datetimepicker({
     format: "yyyy-mm-dd",
@@ -223,7 +238,4 @@
     minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
      });
     </script>
-{#    <script type="text/javascript">#}
-{#    $('#StdoutTable').DataTable();#}
-{#</script>#}
 {% endblock %}
