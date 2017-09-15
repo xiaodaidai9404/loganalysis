@@ -84,11 +84,6 @@
                         <tr role="row" class="">
                         <div class="container" style="padding: 100px 50px 10px;" >
                                                     <td><a data-toggle='popover' title="top 5 url" data-placement="right" data-trigger="hover">${item.http_code}</a></td>
-                                                        <script>
-                                                        $(function (){
-                                                        $("[data-toggle='popover']").popover();
-                                                        });
-                                                        </script>
                                                     </div>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
@@ -129,11 +124,6 @@
                                                 <tr role="row" class="">
                                                 <div class="container" style="padding: 100px 50px 10px;" >
                                                     <td><a data-toggle='popover' title="top 5 url" data-placement="right" data-trigger="hover">${item.http_code}</a></td>
-                                                        <scripts>
-                                                        $(function (){
-                                                        $("[data-toggle='popover']").popover();
-                                                        });
-                                                        </script>
                                                     </div>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
@@ -148,6 +138,10 @@
                                     }
                                 })
         }
+
+        $(function (){
+    $("[data-toggle='popover']").popover();
+});
 </script>
 {% endblock %}
 
