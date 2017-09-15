@@ -82,7 +82,9 @@
                     for (var item of response.result) {
                         var tr = `
                         <tr role="row" class="">
-                                                    <td><a data-toggle='popover' title="top 5 url" data-placement="right" data-container="body" data-content="test">${item.http_code}</a></td>
+                                                    <td><a title="Popover title"
+            data-container="body" data-toggle="popover" data-placement="left"
+            data-content="左侧的 Popover 中的一些内容">${item.http_code}</a></td>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
                                                 </tr>`;
@@ -120,7 +122,9 @@
                                             for (var item of response.result) {
                                                 var tr =`
                                                 <tr role="row" class="">
-                                                    <td><a data-toggle='popover' title="top 5 url" data-placement="right" data-container="body" data-content="test">${item.http_code}</a></td>
+                                                <td><a title="Popover title"
+            data-container="body" data-toggle="popover" data-placement="left"
+            data-content="左侧的 Popover 中的一些内容">${item.http_code}</a></td>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
                                                 </tr>`;
@@ -136,6 +140,7 @@
         }
 
 </script>
+    <script>$(function () { $("[data-toggle='popover']").popover(); });</script>
 {% endblock %}
 
 {% block content %}
@@ -216,7 +221,6 @@
     minView: 2//日期时间选择器所能够提供的最精确的时间选择视图
      });
     </script>
-    <script>$(function () { $("[data-toggle='popover']").popover(); });</script>
 {#    <script type="text/javascript">#}
 {#    $('#StdoutTable').DataTable();#}
 {#</script>#}
