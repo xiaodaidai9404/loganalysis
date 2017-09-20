@@ -84,9 +84,8 @@ def yester_http_code(date1):
 
 
 
-def get_url(date1,code):
-    date_time = datetime.datetime.strptime(date1, '%Y-%m-%d')
-    key = str(datetime)+"_http_url"+str(code)
+def get_url(date_time,code):
+    key = str(date_time)+"_http_url"+str(code)
     List = lrange_http_redis(key)
     result = '\n'.join(List)
     return result
