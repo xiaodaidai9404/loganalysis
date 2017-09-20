@@ -83,13 +83,14 @@
                         var tr = `
                         <tr role="row">
                                                                  <div class="container" style="padding: 100px 50px 10px;" >
-                                                 <td><a data-toggle="popover" title="Example popover">
+                                                 <td><a data-toggle="popover" title="Example popover" data-content="${item.url_list}">
                                                     ${item.http_code}
                                                    </a>
                                                    </td>
                                                    </div>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
+                                                    <td>${item.week_ago_value}</td>
                                                 </tr>`;
                         tbody.append($(tr));
                     }
@@ -126,13 +127,14 @@
                                                 var tr =`
                                                 <tr role="row">
                                                 <div class="container" style="padding: 100px 50px 10px;" >
-                                                 <td><a data-toggle="popover" title="Example popover">
+                                                 <td><a data-toggle="popover" title="Example popover" data-content="${item.url_list}">
                                                     ${item.http_code}
                                                    </a>
                                                    </td>
                                                    </div>
                                                     <td>${item.value}</td>
                                                     <td>${item.yes_value}</td>
+                                                    <td>${item.week_ago_value}</td>
                                                 </tr>`;
                                                 tbody.append($(tr));
                                             }
@@ -182,7 +184,7 @@
                                             <th>http_code</th>
                                             <th>次数</th>
                                             <th>昨日次数</th>
-{#                                            <th>七天前访问量</th>#}
+                                            <th>七天前访问量</th>
                                         </tr>
                                         </thead>
                                         <tbody>

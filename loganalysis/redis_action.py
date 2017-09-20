@@ -57,8 +57,8 @@ def yester_http_code(date1):
     yes_time = date_time - datetime.timedelta(days=1)
     yes_date = yes_time.strftime('%Y-%m-%d')
 
-    # week_ago_time = date_time - datetime.timedelta(days=7)
-    # week_ago_date = week_ago_time.strftime('%Y-%m-%d')
+    week_ago_time = date_time - datetime.timedelta(days=7)
+    week_ago_date = week_ago_time.strftime('%Y-%m-%d')
 
     result = []
 
@@ -71,12 +71,22 @@ def yester_http_code(date1):
         value = bytes.decode(get_redis(key)).split('_')[0]
         yes_key = str(yes_date)+'_http_code_'+str(http_code)
         yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
-#        week_ago_key = str(week_ago_date)+'_country_'+str(country)
-#        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+        week_ago_key = str(week_ago_date)+'_http_code_'+str(http_code)
+        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
         Dict['http_code']=http_code
         Dict['value']=value
         Dict['yes_value']=yes_value
-#        Dict['week_ago_value']=week_ago_value
+        Dict['week_ago_value']=week_ago_value
+        url = get_url(date_time,http_code)
+        Dict['url_list']=url
         result.append(Dict)
     return result
 
+
+
+def get_url(date1,code):
+    date_time = datetime.datetime.strptime(date1, '%Y-%m-%d')
+    key = str(datetime)+"_http_url"+str(code)
+    List = lrange_http_redis(key)
+    result = '\n'.join(List)
+    return result
