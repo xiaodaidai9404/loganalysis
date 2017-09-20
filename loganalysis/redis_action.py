@@ -77,7 +77,7 @@ def yester_http_code(date1):
         Dict['value']=value
         Dict['yes_value']=yes_value
         Dict['week_ago_value']=week_ago_value
-        url = get_url(date_time,http_code)
+        url = get_url(date1,http_code)
         Dict['url_list']=url
         result.append(Dict)
     return result
