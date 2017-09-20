@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/redis_action.py" afterPath="$PROJECT_DIR$/loganalysis/redis_action.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" afterPath="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,14 +42,14 @@
       <file leaf-file-name="country_ays.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
+            <state relative-caret-position="-315">
               <caret line="127" column="72" lean-forward="false" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redis_action.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="redis_action.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
@@ -57,6 +57,26 @@
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_sidebar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loganalysis/templates/base_sidebar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="41" column="68" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loganalysis/templates/base_header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="http_code_ays.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="http_code_ays.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="85" column="102" lean-forward="false" selection-start-line="85" selection-start-column="102" selection-end-line="85" selection-end-column="102" />
+            <state relative-caret-position="79">
+              <caret line="161" column="24" lean-forward="false" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -93,16 +113,6 @@
       </file>
       <file leaf-file-name="redis_update.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/redis_update.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loganalysis/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -119,16 +129,6 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -175,8 +175,8 @@
         <option value="$PROJECT_DIR$/loganalysis/urls.py" />
         <option value="$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html" />
         <option value="$PROJECT_DIR$/loganalysis/templates/test.html" />
-        <option value="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" />
         <option value="$PROJECT_DIR$/loganalysis/redis_action.py" />
+        <option value="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" />
       </list>
     </option>
   </component>
@@ -590,13 +590,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00055" summary="####">
-      <created>1505359587535</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1505359587535</updated>
-    </task>
     <task id="LOCAL-00056" summary="####">
       <created>1505360479052</created>
       <option name="number" value="00056" />
@@ -933,7 +926,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505893615337</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="####">
+      <created>1505894485280</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1505894485280</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1209,20 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/templates/base_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/templates/base_sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="41" column="68" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1261,14 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="114" column="30" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="127" column="72" lean-forward="false" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -1333,14 +1311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="85" column="102" lean-forward="false" selection-start-line="85" selection-start-column="102" selection-end-line="85" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
@@ -1348,6 +1318,38 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/templates/base_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="41" column="68" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/templates/base_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="127" column="72" lean-forward="false" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="161" column="24" lean-forward="false" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
