@@ -83,7 +83,7 @@
                         var tr = `
                         <tr role="row">
                                                  <div class="container" style="padding: 100px 50px 10px;" >
-                                                 <td><a data-toggle="popover" title="Example popover" data-container="body" data-content="test">
+                                                 <td><a data-toggle="popover" title=${item.url_list}>
                                                     ${item.http_code}
                                                    </a>
                                                    </td>
@@ -127,7 +127,7 @@
                                                 var tr =`
                                                 <tr role="row">
                                                 <div class="container" style="padding: 100px 50px 10px;" >
-                                                 <td><a data-toggle="popover" title="Example popover" data-container="body" data-content=${item.url_list}>
+                                                 <td><a data-toggle="popover" title=${item.url_list}>
                                                     ${item.http_code}
                                                    </a>
                                                    </td>
@@ -149,8 +149,8 @@
 
 </script>
     <script>
-     $(function () { $("[data-toggle='popover']").popover(); });
-{#     $(function () { $('.popover-show').popover('show');});#}
+{#     $(function () { $("[data-toggle='popover']").popover(); });#}
+     $(function () { $('.popover-show').popover('show');});
   </script>
 {% endblock %}
 
