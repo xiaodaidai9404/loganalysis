@@ -6,6 +6,9 @@ r = redis.Redis(host='127.0.0.1')
 def search_key(search_date):
     return r.keys(pattern="%s*"%(search_date))
 
+def exists_key(key):
+    return r.exists(key)
+
 def get_redis(key):
     return r.get(key)
 
@@ -38,9 +41,15 @@ def yester_contrast(date1):
         country = bytes.decode(key).split('_')[2]
         value = bytes.decode(get_redis(key)).split('_')[0]
         yes_key = str(yes_date)+'_country_'+str(country)
-        yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
+        if exists_key(yes_key):
+            yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
+        else:
+            yes_value = 0
         week_ago_key = str(week_ago_date)+'_country_'+str(country)
-        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+        if exists_key(week_ago_key):
+            week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+        else:
+            week_ago_value = 0
         Dict['country']=country
         Dict['value']=value
         Dict['yes_value']=yes_value
@@ -70,9 +79,15 @@ def yester_http_code(date1):
         http_code = bytes.decode(key).split('_')[3]
         value = bytes.decode(get_redis(key)).split('_')[0]
         yes_key = str(yes_date)+'_http_code_'+str(http_code)
-        yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
+        if exists_key(yes_key):
+            yes_value = bytes.decode(get_redis(yes_key)).split('_')[0]
+        else:
+            yes_value = 0
         week_ago_key = str(week_ago_date)+'_http_code_'+str(http_code)
-        week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+        if exists_key(week_ago_key):
+            week_ago_value = bytes.decode(get_redis(week_ago_key)).split('_')[0]
+        else:
+            week_ago_value = 0
         Dict['http_code']=http_code
         Dict['value']=value
         Dict['yes_value']=yes_value
