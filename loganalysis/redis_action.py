@@ -88,6 +88,7 @@ def get_url(date_time,code):
     key = str(date_time)+"_http_url_"+str(code)
     print (key)
     List = lrange_http_redis(key)
-    result = '\n'.join(List)
+    List_str = [ bytes.decode(x) for x in List ]
+    result = '\n'.join(List_str)
     print (result)
     return result
