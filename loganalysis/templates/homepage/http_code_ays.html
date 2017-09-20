@@ -149,7 +149,8 @@
 
 </script>
     <script>
-     $(function () { $('.popover-show').popover('show');});
+     $(function () { $("[data-toggle='popover']").popover(); });
+{#     $(function () { $('.popover-show').popover('show');});#}
   </script>
 {% endblock %}
 
