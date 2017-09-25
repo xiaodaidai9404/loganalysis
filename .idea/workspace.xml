@@ -5,10 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" description="                    &lt;div class=&quot;input-group col-xs..." line="109" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="####">
+    <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" afterPath="$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/view.py" afterPath="$PROJECT_DIR$/loganalysis/view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/redis_action.py" afterPath="$PROJECT_DIR$/loganalysis/redis_action.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="463">
               <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
               <folding>
                 <element signature="e#32#68#0" expanded="true" />
@@ -47,6 +46,18 @@
             <state relative-caret-position="-315">
               <caret line="127" column="72" lean-forward="false" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redis_action.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="117" column="29" lean-forward="true" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,11 +177,11 @@
         <option value="$PROJECT_DIR$/loganalysis/templates/base.html" />
         <option value="$PROJECT_DIR$/loganalysis/templates/homepage/country_ays.html" />
         <option value="$PROJECT_DIR$/loganalysis/templates/test.html" />
-        <option value="$PROJECT_DIR$/loganalysis/redis_action.py" />
         <option value="$PROJECT_DIR$/loganalysis/urls.py" />
         <option value="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" />
         <option value="$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" />
         <option value="$PROJECT_DIR$/loganalysis/view.py" />
+        <option value="$PROJECT_DIR$/loganalysis/redis_action.py" />
       </list>
     </option>
   </component>
@@ -566,13 +577,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00079" summary="####">
-      <created>1505469645321</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1505469645321</updated>
-    </task>
     <task id="LOCAL-00080" summary="####">
       <created>1505469731005</created>
       <option name="number" value="00080" />
@@ -909,7 +913,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506326639392</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="####">
+      <created>1506326907166</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1506326907166</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1235,16 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="110" column="14" lean-forward="false" selection-start-line="110" selection-start-column="3" selection-end-line="110" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1324,10 +1325,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="463">
           <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
           <folding>
             <element signature="e#32#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="117" column="29" lean-forward="true" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

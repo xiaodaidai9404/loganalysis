@@ -111,7 +111,8 @@ def get_url(date_time,code):
 def get_domain(date1):
     key = str(date1)+"_http_domain_total"
     List = r.lrange(key,0,9)
-    List1 = List[::-1]
+    List_str = [bytes.decode(x) for x in List]
+    List1 = List_str[::-1]
     return List1
 
 def get_domain_slow_url(key):
