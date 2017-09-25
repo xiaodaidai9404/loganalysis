@@ -75,8 +75,8 @@
                     for (var item of response.result) {
                         $("#domain").append("<option>" + item + "</option>");
                     }
+                    write_table()
                 }
-                write_table(),
                 else {
                     alert(response.msg);
                 }
