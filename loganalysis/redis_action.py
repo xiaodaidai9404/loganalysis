@@ -117,6 +117,7 @@ def get_domain(date1):
 
 def get_domain_slow_url(key):
     List =  lrange_http_redis(key)
+    print (List)
     List1 = []
     for item in List:
         Dict = {}
