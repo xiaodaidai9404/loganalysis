@@ -86,7 +86,7 @@
             type: "POST",
             dataType: "json",
             url: "/get/slowurl/",
-            data: {"search_date": search_date,"domain": domain_name,'csrfmiddlewaretoken': getCookie('csrftoken')}
+            data: {"search_date": search_date,"domain": domain_name,'csrfmiddlewaretoken': getCookie('csrftoken')},
             success: function (response) {
                 if (response.code == 200) {
                     console.log(response);
