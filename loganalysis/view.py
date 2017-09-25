@@ -60,4 +60,5 @@ def slow_url_get(request):
     domain = post_data.get('domain')
     key = date1+"_http_domain_"+domain+"_slow_url"
     result = redis_action.get_domain_slow_url(key)
+    print (result)
     return HttpResponse(json.dumps({"code": 200, "result": result}))
