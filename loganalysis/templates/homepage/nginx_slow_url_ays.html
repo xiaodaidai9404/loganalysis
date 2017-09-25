@@ -104,23 +104,14 @@
                             <div  id="project_manage">
                                 <div class="box-body">
                                  <form class="box-header" style="padding: 0;">
-{#                                     <div class="col-xs-2">#}
-{#                                     <input class="form_datetime form-control" type="text" id="search_date" onchange="search_country_data()" size="16">#}
-{#                                           <label for="name">域名列表</label>#}
-{#                                           <select id="domain" name="domain" class="form-control col-xs-6">#}
-{#                                           </select>#}
-{#                                     </div>#}
-
                                      <div class="form-group">
                             <div class="input-group col-xs-12">
                                 <div class="col-xs-2">
-                                <input class="form_datetime form-control" type="text" id="search_date" onchange="search_country_data()" size="16">
+                                <input class="form_datetime form-control" type="text" id="search_date" size="16">
                                 </div>
                                     <select name="domain" id="domain" class="form-control col-xs-6" style="width: 30%;">
-                            </div>
                                      </div>
-{#                          </div>#}
-{#                                        <button type="button" class="btn btn-success btn-search" onclick="submit_data()">查询</button>#}
+                                     </div>
                                 </form>
                                     <table id="StdoutTable" class="table table-bordered table-striped">
                                         <thead>
@@ -130,12 +121,6 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-{#                                        {% for key,value in result.items %}#}
-{#                                        <tr>#}
-{#                                            <td>{{ key }}</td>#}
-{#                                            <td>{{ value }}</td>#}
-{#                                        </tr>#}
-{#                                        {% endfor %}#}
                                         </tbody>
                                     </table>
                                 </div>
@@ -162,9 +147,6 @@
 <script src="{% static "js/select2.min.js" %}"></script>
 <script src="{% static "js/jquery.Qalert.js" %}"></script>
 <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
-<script>
-    $(function () { $("[data-toggle='popover']").popover(); });
-</script>
 <script src="{% static "js/jquery.Qalert.js" %}"></script>
     <script type="text/javascript">
     $('.form_datetime').datetimepicker({
