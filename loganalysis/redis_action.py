@@ -107,3 +107,22 @@ def get_url(date_time,code):
     result = '\n'.join(List_str)
     print (result)
     return result
+
+def get_domain(date1):
+    key = str(date1)+"_http_domain_total"
+    List = r.lrange(key,0,9)
+    List1 = List[::-1]
+    return List1
+
+def get_domain_slow_url(key):
+    List =  lrange_http_redis(key)
+    List1 = []
+    for item in List:
+        Dict = {}
+        slow_url = item.split(':')[0]
+        slow_num = item.split(':')[1]
+        Dict['slow_url'] = slow_url
+        Dict['slow_num'] = slow_num
+        List1.append(Dict)
+    return List1
+

@@ -40,3 +40,23 @@ def http_code_get(request):
     date1 = post_data.get('search_date')
     result = redis_action.yester_http_code(date1)
     return HttpResponse(json.dumps({"code": 200, "result": result}))
+
+@csrf_exempt
+def slow_url_loganalysis(request):
+    return render(request,'homepage/nginx_slow_url_ays.html')
+
+@csrf_exempt
+def slow_url_domain(request):
+    post_data = request.POST
+    date1 =  post_data.get('search_date')
+    result = redis_action.get_domain(date1)
+    return HttpResponse(json.dumps({"code:200","result": result}))
+
+@csrf_exempt
+def slow_url_get(request):
+    post_data = request.POST
+    date1 = post_data.get('search_date')
+    domain = post_data.get('domain')
+    key = date1+"_http_domain_"+domain+"_slow_url"
+    result = redis_action.get_domain_slow_url(key)
+    return HttpResponse(json.dumps({"code": 200, "result": result}))
