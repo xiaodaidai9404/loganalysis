@@ -69,20 +69,10 @@
             success: function (response) {
                 if (response.code == 200) {
                     console.log(response);
-                    {#                                            定义tbody以及将tbody追加为空#}
-                    var tbody = $("#StdoutTable tbody");
-                    tbody.html('');
-                    {#                                            插入数据#}
 
-                    if ($('#StdoutTable').hasClass('dataTable')) {
-                        var dttable = $('#StdoutTable').dataTable();
-                        dttable.fnClearTable(); //清空一下table
-                        dttable.fnDestroy(); //还原初始化了的datatable
-                    }
                     for (var item of response.result) {
                         $("#domain").append("<option>" + item + "</option>");
                     }
-                    $('#StdoutTable').dataTable();
                 }
                 else {
                     alert(response.msg);
@@ -92,10 +82,6 @@
     }
 
 </script>
-    <script>
-{#     $(function () { $("[data-toggle='popover']").popover(); });#}
-     $(function () { $('.popover-show').popover('show');});
-  </script>
 {% endblock %}
 
 {% block content %}
@@ -103,7 +89,7 @@
     <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            访问http_code 4TOP5
+            nginx 慢链接
         </h1>
 
         <ol class="breadcrumb">
