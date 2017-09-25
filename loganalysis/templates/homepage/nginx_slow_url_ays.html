@@ -64,7 +64,7 @@
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "/get/httpcode/",
+            url: "/get/domain/",
             data: {"search_date": search_date, 'csrfmiddlewaretoken': getCookie('csrftoken')},
             success: function (response) {
                 if (response.code == 200) {
@@ -80,19 +80,7 @@
                         dttable.fnDestroy(); //还原初始化了的datatable
                     }
                     for (var item of response.result) {
-                        var tr = `
-                        <tr role="row">
-                                                 <div class="container" style="padding: 100px 50px 10px;" >
-                                                 <td><a data-toggle="popover" title="${item.url_list}">
-                                                    ${item.http_code}
-                                                   </a>
-                                                   </td>
-                                                   </div>
-                                                    <td>${item.value}</td>
-                                                    <td>${item.yes_value}</td>
-                                                    <td>${item.week_ago_value}</td>
-                                                </tr>`;
-                        tbody.append($(tr));
+                        $("#domain").append("<option>" + item + "</option>");
                     }
                     $('#StdoutTable').dataTable();
                 }
@@ -102,50 +90,6 @@
             }
         })
     }
-
-        function search_country_data() {
-            var search_date = $('#search_date').val();
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: "/get/httpcode/",
-                data: {"search_date": search_date, 'csrfmiddlewaretoken': getCookie('csrftoken')},
-                                    success: function (response) {
-                                        if (response.code == 200) {
-                                            console.log(response);
-{#                                            定义tbody以及将tbody追加为空#}
-                                            var tbody = $("#StdoutTable tbody");
-                                            tbody.html('');
-{#                                            插入数据#}
-
-                                            if ($('#StdoutTable').hasClass('dataTable')) {
-                                                var dttable = $('#StdoutTable').dataTable();
-                                                dttable.fnClearTable(); //清空一下table
-                                                dttable.fnDestroy(); //还原初始化了的datatable
-                                            }
-                                            for (var item of response.result) {
-                                                var tr =`
-                                                <tr role="row">
-                                                <div class="container" style="padding: 100px 50px 10px;" >
-                                                 <td><a data-toggle="popover" title="${item.url_list}">
-                                                    ${item.http_code}
-                                                   </a>
-                                                   </td>
-                                                   </div>
-                                                    <td>${item.value}</td>
-                                                    <td>${item.yes_value}</td>
-                                                    <td>${item.week_ago_value}</td>
-                                                </tr>`;
-                                                tbody.append($(tr));
-                                            }
-                                            $('#StdoutTable').dataTable();
-                                        }
-                                        else {
-                                            alert(response.msg);
-                                        }
-                                    }
-                                })
-        }
 
 </script>
     <script>
@@ -186,11 +130,7 @@
                                 <div class="col-xs-2">
                                 <input class="form_datetime form-control" type="text" id="search_date" onchange="search_country_data()" size="16">
                                 </div>
-{#                                <div class="input-group-btn">#}
-                                    <label for="name">域名列表</label>
-                                    <select name="domain" id="domain" class="form-control col-xs-6" style="width: 40%;">
-                                    </select>
-{#                                </div>#}
+                                    <select name="domain" id="domain" class="form-control col-xs-6" style="width: 30%;">
                             </div>
                                      </div>
 {#                          </div>#}
