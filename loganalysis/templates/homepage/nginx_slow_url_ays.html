@@ -81,6 +81,40 @@
                 }
             }
         })
+        var domain_name = $('#domain').val()
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/get/slowurl/",
+            data: {"search_date": search_date,"domain": domain_name,'csrfmiddlewaretoken': getCookie('csrftoken')}
+            success: function (response) {
+                if (response.code == 200) {
+                    console.log(response);
+                    {#                                            定义tbody以及将tbody追加为空#}
+                    var tbody = $("#StdoutTable tbody");
+                    tbody.html('');
+                    {#                                            插入数据#}
+
+                    if ($('#StdoutTable').hasClass('dataTable')) {
+                        var dttable = $('#StdoutTable').dataTable();
+                        dttable.fnClearTable(); //清空一下table
+                        dttable.fnDestroy(); //还原初始化了的datatable
+                    }
+                    for (var item of response.result) {
+                        var tr = `
+                        <tr role="row">
+                                                    <td>${item.slow_url}</td>
+                                                    <td>${item.slow_num}</td>
+                                                </tr>`;
+                        tbody.append($(tr));
+                    }
+                    $('#StdoutTable').dataTable();
+                }
+                else {
+                    alert(response.msg);
+                }
+            }
+        })
     }
 
 </script>
