@@ -2,7 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/test.html" description="&lt;script src=&quot;{%static &quot;plugins/jQuery/jQuery-2.1.4..." line="53" />
-    <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" description="                    &lt;div class=&quot;input-group col-xs..." line="144" />
+    <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" description="                    &lt;div class=&quot;input-group col-xs..." line="147" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
@@ -75,8 +75,8 @@
       <file leaf-file-name="http_code_ays.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="102" column="10" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="102" selection-end-column="10" />
+            <state relative-caret-position="64">
+              <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
       <file leaf-file-name="nginx_slow_url_ays.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+            <state relative-caret-position="-71">
+              <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -577,13 +577,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00085" summary="####">
-      <created>1505474686930</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1505474686930</updated>
-    </task>
     <task id="LOCAL-00086" summary="####">
       <created>1505474731367</created>
       <option name="number" value="00086" />
@@ -920,7 +913,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506328721687</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="####">
+      <created>1506328851448</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1506328851449</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1286,14 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="102" column="10" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="102" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1332,10 +1324,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+        <state relative-caret-position="-71">
+          <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
