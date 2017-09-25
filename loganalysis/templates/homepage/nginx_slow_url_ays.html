@@ -63,6 +63,7 @@
         day1.setDate(day1.getDate() - 1);
         var search_date = day1.format("yyyy-MM-dd");
         $('#search_date').attr('placeholder', search_date);
+        $('#search_date').val(search_date);
         $.ajax({
             type: "POST",
             dataType: "json",

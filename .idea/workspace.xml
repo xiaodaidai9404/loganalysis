@@ -2,7 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/test.html" description="&lt;script src=&quot;{%static &quot;plugins/jQuery/jQuery-2.1.4..." line="53" />
-    <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" description="                    &lt;div class=&quot;input-group col-xs..." line="148" />
+    <bookmark url="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" description="                    &lt;div class=&quot;input-group col-xs..." line="149" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
@@ -95,8 +95,8 @@
       <file leaf-file-name="nginx_slow_url_ays.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+            <state relative-caret-position="116">
+              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -577,13 +577,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00088" summary="####">
-      <created>1505877077887</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1505877077888</updated>
-    </task>
     <task id="LOCAL-00089" summary="####">
       <created>1505877238952</created>
       <option name="number" value="00089" />
@@ -920,7 +913,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506329918884</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="####">
+      <created>1506329991175</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1506329991175</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1334,8 +1334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+        <state relative-caret-position="116">
+          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
