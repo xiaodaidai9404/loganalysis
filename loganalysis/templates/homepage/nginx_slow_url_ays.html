@@ -55,7 +55,9 @@
         if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
     }
+    </script>
 
+    <script>
     function load() {
         var day1 = new Date();
         day1.setDate(day1.getDate() - 1);
@@ -104,14 +106,13 @@
                             <div  id="project_manage">
                                 <div class="box-body">
                                  <form class="box-header" style="padding: 0;">
-                                     <div class="form-group">
-                            <div class="input-group col-xs-12">
+                                <div class="input-group col-xs-12">
                                 <div class="col-xs-2">
                                 <input class="form_datetime form-control" type="text" id="search_date" size="16">
                                 </div>
                                     <select name="domain" id="domain" class="form-control col-xs-6" style="width: 30%;">
-                                     </div>
-                                     </div>
+                                    </select>
+                                </div>
                                 </form>
                                     <table id="StdoutTable" class="table table-bordered table-striped">
                                         <thead>
