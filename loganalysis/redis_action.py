@@ -117,9 +117,10 @@ def get_domain(date1):
 
 def get_domain_slow_url(key):
     List =  lrange_http_redis(key)
+    List_str = [bytes.decode(x) for x in List]
     print (List)
     List1 = []
-    for item in List:
+    for item in List_str:
         Dict = {}
         slow_url = item.split(':')[0]
         slow_num = item.split(':')[1]
