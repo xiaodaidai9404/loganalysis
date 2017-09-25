@@ -50,7 +50,7 @@ def slow_url_domain(request):
     post_data = request.POST
     date1 =  post_data.get('search_date')
     result = redis_action.get_domain(date1)
-    return HttpResponse(json.dumps({"code:200","result": result}))
+    return HttpResponse(json.dumps({"code":200,"result": result}))
 
 @csrf_exempt
 def slow_url_get(request):

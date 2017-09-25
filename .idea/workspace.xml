@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/redis_action.py" afterPath="$PROJECT_DIR$/loganalysis/redis_action.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" afterPath="$PROJECT_DIR$/loganalysis/templates/homepage/http_code_ays.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/urls.py" afterPath="$PROJECT_DIR$/loganalysis/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/view.py" afterPath="$PROJECT_DIR$/loganalysis/view.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+            <state relative-caret-position="283">
+              <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
               <folding>
                 <element signature="e#32#68#0" expanded="true" />
               </folding>
@@ -105,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nginx_slow_url_ays.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nginx_slow_url_ays.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/templates/homepage/nginx_slow_url_ays.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
@@ -577,13 +573,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00057" summary="####">
-      <created>1505379561379</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1505379561380</updated>
-    </task>
     <task id="LOCAL-00058" summary="####">
       <created>1505379663712</created>
       <option name="number" value="00058" />
@@ -920,7 +909,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505894662260</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="####">
+      <created>1506320971289</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1506320971293</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1276,30 +1272,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="38" />
           <folding>
             <element signature="e#620#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-          <folding>
-            <element signature="e#32#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1335,6 +1313,24 @@
         <state relative-caret-position="379">
           <caret line="179" column="62" lean-forward="true" selection-start-line="179" selection-start-column="62" selection-end-line="179" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+          <folding>
+            <element signature="e#32#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
