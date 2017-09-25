@@ -87,6 +87,7 @@
 
     function search_domain_data() {
         var search_date = $('#search_date').val();
+        document.getElementById("domain").options.length=0;
         $.ajax({
             type: "POST",
             dataType: "json",
