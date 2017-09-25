@@ -81,7 +81,8 @@
                 }
             }
         })
-        var domain_name = $('#domain').val()
+        var domain_name = $('#domain').val();
+        console.log(domain_name);
         $.ajax({
             type: "POST",
             dataType: "json",
