@@ -140,7 +140,7 @@
                     for (var item of response.result) {
                         var tr = `
                         <tr role="row">
-                            <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">${item.slow_url}</td>
+                            <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;" title="${item.slow_url}">${item.slow_url}</td>
                             <td>${item.slow_num}</td>
                                                 </tr>`;
                         tbody.append($(tr));
