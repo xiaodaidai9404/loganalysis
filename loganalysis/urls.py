@@ -28,5 +28,5 @@ urlpatterns = [
     url(r'^loganalysis/slowurl/$',slow_url_loganalysis),
     url(r'^get/slowurl/$',slow_url_get),
     url(r'^get/domain/$',slow_url_domain),
-    url(r'$alert/user/$',alert_user),
+    url(r'^alert/user/$',alert_user),
 ]
