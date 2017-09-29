@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alert/view.py" afterPath="$PROJECT_DIR$/alert/view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/urls.py" afterPath="$PROJECT_DIR$/loganalysis/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alert/view.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="463">
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="48" lean-forward="false" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state relative-caret-position="465">
+              <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
               <folding>
                 <element signature="e#620#661#0" expanded="true" />
               </folding>
@@ -181,10 +181,10 @@
         <option value="$PROJECT_DIR$/loganalysis/templates/homepage/alert_user.html" />
         <option value="$PROJECT_DIR$/loganalysis/alert/views.py" />
         <option value="$PROJECT_DIR$/alert/views.py" />
-        <option value="$PROJECT_DIR$/loganalysis/urls.py" />
         <option value="$PROJECT_DIR$/loganalysis/redis_action.py" />
         <option value="$PROJECT_DIR$/templates/homepage/alert_user.html" />
         <option value="$PROJECT_DIR$/alert/view.py" />
+        <option value="$PROJECT_DIR$/loganalysis/urls.py" />
       </list>
     </option>
   </component>
@@ -586,13 +586,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00129" summary="####">
-      <created>1506327065989</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1506327065989</updated>
-    </task>
     <task id="LOCAL-00130" summary="####">
       <created>1506328478756</created>
       <option name="number" value="00130" />
@@ -929,7 +922,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506679279488</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="####">
+      <created>1506679449122</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1506679449122</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1318,16 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loganalysis/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="48" lean-forward="false" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="e#620#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/homepage/country_ays.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2370">
@@ -1368,6 +1358,16 @@
           <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
           <folding>
             <element signature="e#32#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loganalysis/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="e#620#661#0" expanded="true" />
           </folding>
         </state>
       </provider>
