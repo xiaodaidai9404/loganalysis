@@ -32,7 +32,7 @@
             <i class="fa fa-dashboard"></i> <span>首页</span>
           </a>
         </li>
-        <li id="qccrdomain" class="treeview">
+        <li id="loganalysis" class="treeview">
             <a href="#">
                 <i class="fa fa-key"></i>
                 <span>日志分析</span>
@@ -44,6 +44,19 @@
                 <li id="servercode"><a href="/loganalysis/httpcode"><i class="fa fa-circle-o"></i>http_code统计</a>
                 </li>
                 <li id="serverslowurl"><a href="/loganalysis/slowurl"><i class="fa fa-circle-o"></i>慢url查询</a>
+                </li>
+            </ul>
+        </li>
+        <li id="alert_rule" class="treeview">
+            <a href="#">
+                <i class="fa fa-key"></i>
+                <span>报警设置</span>
+                <span class="label label-primary pull-right">0</span>
+            </a>
+            <ul class="treeview-menu">
+                <li id="servercounter"><a href="/alert/user"><i class="fa fa-circle-o"></i>报警人员</a>
+                </li>
+                <li id="servercode"><a href="/alert/rule"><i class="fa fa-circle-o"></i>报警规则</a>
                 </li>
             </ul>
         </li>
