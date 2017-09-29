@@ -99,23 +99,27 @@
                 <div class="tab-pane active">
                     <form class="form-horizontal" method="post" role="form">{% csrf_token %}
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">联系人信息</label>
+                            <label class="col-sm-4 control-label">姓名</label>
 
                             <div class="col-sm-6">
                                 <input type="text" id="user" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
                                        required pattern="[a-zA-Z0-9\.\-_]+">
                             </div>
+                            <label class="col-sm-4 control-label">手机号</label>
                             <div class="col-sm-6">
                                 <input type="text" id="telephone" class="form-control" placeholder="格式:手机号"
                                        required pattern="[0-9]+">
                             </div>
+                            <label class="col-sm-4 control-label">微信号</label>
                             <div class="col-sm-6">
                                 <input type="text" id="wechat" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
                                        required pattern="[a-zA-Z0-9\.\-_]+">
                             </div>
+                            <label class="col-sm-4 control-label">邮箱</label>
                             <div class="col-sm-6">
                                 <input type="email" id="email" class="form-control" placeholder="email">
                             </div>
+                            <label class="col-sm-4 control-label">钉钉号</label>
                              <div class="col-sm-6">
                                 <input type="text" id="dingtalk" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
                                        required pattern="[a-zA-Z0-9\.\-_]+">
