@@ -23,6 +23,12 @@ def hgetall_redis(key):
     Dict = r.hgetall(key)
     return Dict
 
+def hset_redis(key,**kwargs):
+    Dict = kwargs
+    for k in Dict.keys():
+        value = Dict.get('k')
+        r.hset(key,k,value)
+
 
 def yester_contrast(date1):
     import datetime

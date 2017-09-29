@@ -73,11 +73,11 @@
                                     {% if result %}
                                         {% for item in result %}
                                         <tr role="row" class="">
-                                        <td>${{ item.name }}</td>
-                                        <td>${{ item.telephone }}</td>
-                                        <td>${{ item.wechat }}</td>
-                                        <td>${{ item.email }}</td>
-                                        <td>${{ item.dingtalk }}</td>
+                                        <td>{{ item.name }}</td>
+                                        <td>{{ item.telephone }}</td>
+                                        <td>{{ item.wechat }}</td>
+                                        <td>{{ item.email }}</td>
+                                        <td>{{ item.dingtalk }}</td>
                                         </tr>
                                         {% endfor %}
                                     {% endif %}
@@ -134,7 +134,7 @@
                             <button type="button" class="btn btn-default"
                                     data-dismiss="modal">关闭</button>
                             <button type="submit" class="btn btn-primary"
-                                    name="" onclick="add_domain()">添加</button>
+                                    name="" onclick="add_alert_user()">添加</button>
                         </div>
                     </form>
                 </div>
@@ -162,17 +162,22 @@
     $("#domainconf").addClass("active");
     $('#DNSTable').DataTable();
 
-    function add_domain() {
-        var domain_name = $('#domain_name').val();
+    function add_alert_user() {
+        var user = $('#user').val();
+        var telephone = $('#telephone').val();
+        var wechat = $('wechat').val();
+        var email = $('email').val();
+        var dingtalk = $('dingtalk').val();
+
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "/domain/add/",
-            data: {"domain_name":　domain_name, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+            url: "/add/alert_user/",
+            data: {"name":user,"telephone":telephone,"wechat":wechat,"email":email,"dingtalk":dingtalk,'csrfmiddlewaretoken': getCookie('csrftoken')},
             success: function (result) {
-                if (result.code!=200) {
+{#                if (result.code!=200) {#}
                     alert(result.msg);
-                }
+{#                }#}
             }
         })
     }
