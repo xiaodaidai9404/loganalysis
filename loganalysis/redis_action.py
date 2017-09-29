@@ -19,6 +19,10 @@ def lrange_http_redis(key):
     List = r.lrange(key,0,4)
     return List[::-1]
 
+def hgetall_redis(key):
+    Dict = r.hgetall(key)
+
+
 def yester_contrast(date1):
     import datetime
     """
@@ -128,4 +132,18 @@ def get_domain_slow_url(key):
         Dict['slow_num'] = slow_num
         List1.append(Dict)
     return List1
+
+def get_alert_user():
+    key_List = search_key("alert_user")
+    List = []
+
+    for key in key_List:
+        decode_key = bytes.decode(key)
+        Dict = hgetall_redis(decode_key)
+        Dict1 = {bytes.decode(k): bytes.decode(Dict.get(k)) for k in Dict.keys()}
+        List.append(Dict1)
+
+    return List
+
+
 

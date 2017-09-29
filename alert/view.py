@@ -14,4 +14,5 @@ import loganalysis.redis_action as redis_action
 
 @csrf_exempt
 def alert_user(request):
-    return render(request,"homepage/alert_user.html")
+    result = redis_action.get_alert_user()
+    return render(request,"homepage/alert_user.html",{"result":result})
