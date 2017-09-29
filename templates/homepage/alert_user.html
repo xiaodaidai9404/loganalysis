@@ -73,11 +73,11 @@
                                     {% if result %}
                                         {% for item in result %}
                                         <tr role="row" class="">
-                                        <td>${item.name}</td>
-                                        <td>${item.telephone}</td>
-                                        <td>${item.wechat}</td>
-                                        <td>${item.email}</td>
-                                        <td>${item.dingtalk}</td>
+                                        <td>${{ item.name }}</td>
+                                        <td>${{ item.telephone }}</td>
+                                        <td>${{ item.wechat }}</td>
+                                        <td>${{ item.email }}</td>
+                                        <td>${{ item.dingtalk }}</td>
                                         </tr>
                                         {% endfor %}
                                     {% endif %}
