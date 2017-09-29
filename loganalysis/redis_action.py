@@ -21,6 +21,7 @@ def lrange_http_redis(key):
 
 def hgetall_redis(key):
     Dict = r.hgetall(key)
+    return Dict
 
 
 def yester_contrast(date1):
