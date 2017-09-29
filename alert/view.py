@@ -28,6 +28,7 @@ def add_alert_user(request):
     key = "alert_user_"+str(name)
     redis_action.hset_redis(key,name=name,wechat=wechat,telephone=telephone,email=email,dingtalk=dingtalk)
     if redis_action.exists_key(key):
-        return HttpResponse(json.dumps({"code": 200, "msg": "添加成功"}))
+        result = json.dumps({"code": 200, "msg": "添加成功"})
     else:
-        return HttpResponse(json.dumps({"code": 500, "msg": "添加失败"}))
+        result = json.dumps({"code": 500, "msg": "添加失败"})
+    return HttpResponse({"result":result})
