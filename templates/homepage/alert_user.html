@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block css%}
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "dist/css/AdminLTE.min.css" %}">
+    <link rel="stylesheet" href="{% static "dist/css/skins/_all-skins.min.css" %}">
+    <link rel="stylesheet" href="{% static "plugins/iCheck/flat/blue.css" %}">
+    <link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "plugins/datatables/dataTables.bootstrap.css"%}">
+
+    <link rel="stylesheet" href="{% static "css/select2.min.css"%}">
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{% static "js/html5shiv.min.js" %}"></script>
+    <script src="{% static "js/respond.min.js" %}"></script>
+    <![endif]-->
+    <style>
+        .nav-tabs {
+            background-color: #eee;
+        }
+        .form-group {
+            margin-top: 25px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="fakeloader"></div>
+    <div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            报警联系人
+        </h1>
+
+        <ol class="breadcrumb">
+          <li class="active"><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
+          <li>联系人列表</li>
+        </ol>
+    </section>
+
+        <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-xs-12">
+                    <div class="box-header row">
+                        <div class="col-xs-7" style="">
+                            <a href="#AddUser" role="button"  class="btn btn-success" data-toggle="modal">添加联系人</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="project-content" class="nav-tabs-custom">
+                    <div class="tab-content">
+                        <div  id="project_manage">
+                            <div class="box-body">
+                                <table id="DNSTable" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>手机</th>
+                                        <th>微信</th>
+                                        <th>邮箱</th>
+                                        <th>钉钉</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if result %}
+                                        {% for item in result %}
+                                        <tr role="row" class="">
+                                        </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="AddUser" tabindex="-1" role="dialog" aria-labelledby="addDNSLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">添加联系人</h4>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <form class="form-horizontal" method="post" role="form">{% csrf_token %}
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">联系人信息</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" id="user" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
+                                       required pattern="[a-zA-Z0-9\.\-_]+">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" id="telephone" class="form-control" placeholder="格式:手机号"
+                                       required pattern="[0-9]+">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" id="wechat" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
+                                       required pattern="[a-zA-Z0-9\.\-_]+">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" id="email" class="form-control" placeholder="email">
+                            </div>
+                             <div class="col-sm-6">
+                                <input type="text" id="dingtalk" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
+                                       required pattern="[a-zA-Z0-9\.\-_]+">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default"
+                                    data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary"
+                                    name="" onclick="add_domain()">添加</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{%static "plugins/jQuery/jQuery-2.1.4.min.js" %}"></script>
+<script src="{% static "js/jquery-ui.min.js" %}"></script>
+<script src="{%static "dist/js/app.min.js" %}"></script>
+<script src="{% static "plugins/datatables/jquery.dataTables.min.js" %}"></script>
+<script src="{% static "plugins/datatables/dataTables.bootstrap.min.js" %}"></script>
+<script src="{% static "plugins/iCheck/icheck.min.js" %}"></script>
+<script src="{% static "js/myqccr.js" %}"></script>
+<script src="{% static "js/select2.min.js" %}"></script>
+<script src="{% static "js/jquery.Qalert.js" %}"></script>
+<script type="text/javascript">
+    $("#qccrdomain").addClass("active");
+    $("#domainconf").addClass("active");
+    $('#DNSTable').DataTable();
+
+    function add_domain() {
+        var domain_name = $('#domain_name').val();
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/domain/add/",
+            data: {"domain_name":　domain_name, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+            success: function (result) {
+                if (result.code!=200) {
+                    alert(result.msg);
+                }
+            }
+        })
+    }
+
+    function del_domain(domain_id) {
+        var c = confirm("确定删除？");
+        if (c==true) {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "/domain/del/",
+                data: {"dns_id": domain_id, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+                success: function (result) {
+                    if (result.code!=200) {
+                        alert(result.msg);
+                    }
+                }
+            })
+        }
+    }
+</script>
+{% endblock %}

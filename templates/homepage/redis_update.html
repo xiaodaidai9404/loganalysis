@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{%load staticfiles%}
+
+{% block css%}
+	<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "dist/css/AdminLTE.min.css" %}">
+	<link rel="stylesheet" href="{% static "dist/css/skins/_all-skins.min.css" %}">
+	<link rel="stylesheet" href="{% static "plugins/iCheck/flat/blue.css" %}">
+	<link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
+ 	<link rel="stylesheet" href="{% static "plugins/datatables/dataTables.bootstrap.css"%}">
+    <link rel="stylesheet" href="{%static "css/select2.min.css" %}">
+{#	<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />#}
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="{% static "js/html5shiv.min.js" %}"></script>
+        <script src="{% static "js/respond.min.js" %}"></script>
+    <![endif]-->
+    <style>
+    .head-box{min-height:180px;}
+    #svn-content{display: none}
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="content-wrapper">
+        <section class="content-header">
+          <h1>
+              redis管理平台
+              <small>redis管理 - 修改redis服务器</small>
+          </h1>
+          <ol class="breadcrumb">
+              <li class="active"><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
+              <li>修改redis服务器</li>
+          </ol>
+        </section>
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">redis服务器</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                        <form class="form-horizontal" name="edit_environment_record" role="form" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ result.server_id }}">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">redis ip<i style="color:red">*</i></label>
+                                <div class="col-xs-8 align-left">
+                                    <input type="text" class="form-control" name="server_ip" id="server_ip"
+                                           value="{{ result.server_ip }}" required pattern="[0-9]+.[0-9]+.[0-9]+.[0-9]+" title="IP地址格式:如127.0.0.1">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">redis 端口<i style="color:red">*</i></label>
+                                <div class="col-xs-8 align-left">
+                                    <input type="text" class="form-control" name="server_port" id="server_port" placeholder="redis端口"
+                                        value="{{ result.port }}" required pattern="[0-9]{0,5}" title="IP地址格式:如6379">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-primary" role="button" name="redis_update" onclick="edit_server({{ result.server_id }})"><i class="fa fa-fw fa-check"></i>保存</button>
+                                <a href="/" class="btn btn-primary" role="button"><i class="fa fa-fw fa-check"></i>返回</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+{% endblock %}
+{% block js %}
+    <script src="{%static "plugins/jQuery/jQuery-2.1.4.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui.min.js" %}"></script>
+    <script src="{%static "dist/js/app.min.js" %}"></script>
+    <script src="{% static "plugins/datatables/jquery.dataTables.min.js" %}"></script>
+    <script src="{% static "plugins/datatables/dataTables.bootstrap.min.js" %}"></script>
+    <script src="{% static "js/myqccr.js" %}"></script>
+    <script src="{% static "js/select2.min.js" %}"></script>
+    <script>
+        function edit_server(server_id) {
+            var server_ip = $('#server_ip').val();
+            var port = $('#server_port').val()
+            var c = confirm("确定修改保存吗？");
+            if (c == true) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/edit/redis/",
+                    data: {"server_id": server_id, "server_ip": server_ip, "server_port": port, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+                    success: function (result) {
+                        if (result.code != 200) {
+                            alert(result.msg);
+                        }
+{#                        window.history.back();#}
+                        window.location.href = "/";
+                    }
+                })
+            }
+        }
+
+    </script>
+{% endblock %}
