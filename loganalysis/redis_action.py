@@ -26,7 +26,7 @@ def hgetall_redis(key):
 def hset_redis(key,**kwargs):
     Dict = kwargs
     for k in Dict.keys():
-        value = Dict.get('k')
+        value = Dict.get(k)
         r.hset(key,k,value)
 
 
