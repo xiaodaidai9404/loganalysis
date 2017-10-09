@@ -32,5 +32,5 @@ urlpatterns = [
     url(r'^add/alert_user/$',add_alert_user),
     url(r'^del/alert_user/$',del_alert_user),
     url(r'^alert/rule/$',alert_rule),
-    url(r'^add/alert_rule/$'),add_alert_rule),
+    url(r'^add/alert_rule/$',add_alert_rule),
 ]
