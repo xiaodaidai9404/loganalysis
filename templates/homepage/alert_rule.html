@@ -30,6 +30,19 @@
             margin-top: 25px;
         }
     </style>
+    <script>
+    function write_select() {
+        var alert_type = $('#alert_type').val();
+        var write_type = $('#alert_type_value select');
+        if (alert_type = "country") {
+            var option = `
+                         <option value="Egypt">埃及</option>
+                         <option value="Saudi Arabia">沙特</option>
+                        `;
+            write_type.append($(option);
+        }
+    }
+    </script>
 {% endblock %}
 {% block content %}
     <div class="fakeloader"></div>
@@ -108,7 +121,7 @@
                             <label class="col-sm-4 control-label">报警类型</label>
 
                             <div class="col-sm-6">
-                                <select class="form-control">
+                                <select id="alert_type" onclick="write_select()"class="form-control">
                                     <option id="alert_country" value="country">country</option>
                                     <option id="alert_slow_url" value="slow_url">slow_url</option>
                                     <option id="alert_http_code" value="http_code">http_code</option>
