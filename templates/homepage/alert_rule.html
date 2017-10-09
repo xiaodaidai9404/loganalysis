@@ -33,13 +33,9 @@
     <script>
     function write_select() {
         var alert_type = $('#alert_type').val();
-        var write_type = $('#alert_type_value select');
         if (alert_type = "country") {
-            var option = `
-                         <option value="Egypt">埃及</option>;
-                         <option value="Saudi Arabia">沙特</option>;
-                        `;
-{#            write_type.append($(option);#}
+            $(alert_type_value).options.add(new options("埃及","Egypt"));
+            $(alert_type_value).options.add(new options("沙特","Saudi Arabia"));
         }
     }
     </script>
