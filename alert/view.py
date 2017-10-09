@@ -61,5 +61,5 @@ def add_alert_rule(request):
     print ("alert_value "+alert_value)
     print ("alert_user "+alert_user)
     key = str(alert_type)+"_"+str(alert_type_value)+"_"+str(alert_type_rule)
-    print key
+    print (key)
     return HttpResponse({"result": json.dumps({"code": 200, "msg": "测试"})})
