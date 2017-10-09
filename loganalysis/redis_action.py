@@ -155,5 +155,17 @@ def get_alert_user():
 
     return List
 
+def get_alert_rule():
+    key_List =  search_key("alert_rule")
+    List = []
+
+    for key in key_List:
+        decode_key = bytes.decode(key)
+        Dict = hgetall_redis(decode_key)
+        Dict1 = {bytes.decode(k): bytes.decode(Dict.get(k)) for k in Dict.keys()}
+        Dict1['key'] = key
+        List.append(Dict1)
+
+    return List
 
 

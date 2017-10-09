@@ -91,8 +91,7 @@
                                 <table id="ALERTable" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>报警类型</th>
-                                        <th>触发条件</th>
+                                        <th>报警信息</th>
                                         <th>触发值</th>
                                         <th>报警方式</th>
                                         <th>报警联系人</th>
@@ -102,11 +101,10 @@
                                     {% if result %}
                                         {% for item in result %}
                                         <tr role="row" class="">
-                                        <td>{{ item.name }}</td>
-                                        <td>{{ item.telephone }}</td>
-                                        <td>{{ item.wechat }}</td>
-                                        <td>{{ item.email }}</td>
-                                        <td>{{ item.dingtalk }}</td>
+                                        <td>{{ item.key }}</td>
+                                        <td>{{ item.alert_value }}</td>
+                                        <td>{{ item.alert_type_media }}</td>
+                                        <td>{{ item.alert_user }}</td>
                                         <td><button type="submit" class="btn btn-warning" name="" onclick="del_alert_user({{ item.name }})">删除</button></td>
                                         </tr>
                                         {% endfor %}
@@ -170,6 +168,15 @@
                                 <input type="text" id="alert_user" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
                                        required pattern="[a-zA-Z0-9\.\-_]+">
                             </div>
+                            <label class="col-sm-4 control-label">报警方式</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="alert_type_media">
+                                    <option value="email">邮件</option>
+                                    <option value="telephone">手机</option>
+                                    <option value="wechat">微信</option>
+                                    <option value="dingtalk">钉钉</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default"
@@ -209,12 +216,13 @@
         var alert_type_rule = $('#alert_type_rule').val();
         var alert_value = $('#alert_value').val();
         var alert_user = $('#alert_user').val();
+        var alert_type_media = $('#alert_type_media').val();
 
         $.ajax({
             type: "POST",
             dataType: "json",
             url: "/add/alert_rule/",
-            data: {"alert_type":alert_type,"alert_type_value":alert_type_value,"alert_type_rule":alert_type_rule,"alert_value":alert_value,"alert_user":alert_user,'csrfmiddlewaretoken': getCookie('csrftoken')},
+            data: {"alert_type":alert_type,"alert_type_value":alert_type_value,"alert_type_rule":alert_type_rule,"alert_value":alert_value,"alert_user":alert_user,"alert_type_media":alert_type_media,'csrfmiddlewaretoken': getCookie('csrftoken')},
             success: function (result) {
 {#                if (result.code!=200) {#}
                     alert(result.msg);

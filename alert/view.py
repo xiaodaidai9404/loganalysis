@@ -50,8 +50,6 @@ def alert_rule(request):
 
 @csrf_exempt
 def add_alert_rule(request):
-    print (1)
-    print (request)
     post_data = request.POST
     print (post_data)
     alert_type = post_data.get('alert_type')
@@ -59,11 +57,11 @@ def add_alert_rule(request):
     alert_type_rule = post_data.get('alert_type_rule')
     alert_value = post_data.get('alert_value')
     alert_user = post_data.get('alert_user')
-    print ("alert_type "+alert_type)
-    print ("alert_type_value "+alert_type_value)
-    print ("alert_type_rule "+alert_type_rule)
-    print ("alert_value "+alert_value)
-    print ("alert_user "+alert_user)
-    key = str(alert_type)+"_"+str(alert_type_value)+"_"+str(alert_type_rule)
-    print (key)
-    return HttpResponse({"result": json.dumps({"code": 200, "msg": "测试"})})
+    alert_type_media = post_data.get('alert_type_media')
+    key = "alert_rule_"+str(alert_type)+"_"+str(alert_type_value)+"_"+str(alert_type_rule)
+    redis_action.hset_redis(key,alert_value=alert_value,alert_user=alert_user,alert_type_media=alert_type_media)
+    if redis_action.exists_key(key):
+        result = json.dumps({"code": 200, "msg": "添加成功"})
+    else:
+        result = json.dumps({"code": 500, "msg": "添加失败"})
+    return HttpResponse({"result": result})
