@@ -123,12 +123,12 @@
         </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="AddUser" tabindex="-1" role="dialog" aria-labelledby="addDNSLabel" aria-hidden="true">
+    <div class="modal fade" id="AddUser" tabindex="-1" role="dialog" aria-labelledby="addLable" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">添加联系人</h4>
+                <h4 class="modal-title">添加报警规则</h4>
             </div>
 
             <div class="tab-content">
@@ -167,7 +167,7 @@
                             </div>
                             <label class="col-sm-4 control-label">报警联系人</label>
                              <div class="col-sm-6">
-                                <input type="text" id="dingtalk" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
+                                <input type="text" id="alert_user" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
                                        required pattern="[a-zA-Z0-9\.\-_]+">
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                             <button type="button" class="btn btn-default"
                                     data-dismiss="modal">关闭</button>
                             <button type="submit" class="btn btn-primary"
-                                    name="" onclick="add_alert_user()">添加</button>
+                                    name="" onclick="add_alert_rule">添加</button>
                         </div>
                     </form>
                 </div>
@@ -203,18 +203,18 @@
     $("#domainconf").addClass("active");
     $('#ALERTable').DataTable();
 
-    function add_alert_user() {
-        var user = $('#user').val();
-        var telephone = $('#telephone').val();
-        var wechat = $('wechat').val();
-        var email = $('email').val();
-        var dingtalk = $('dingtalk').val();
+    function add_alert_rule() {
+        var alert_type = $('#alert_type').val();
+        var alert_type_value = $('#alert_type_value').val();
+        var alert_type_rule = $('#alert_type_rule').val();
+        var alert_value = $('#alert_value').val();
+        var alert_user = $('#alert_user').val();
 
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "/add/alert_user/",
-            data: {"name":user,"telephone":telephone,"wechat":wechat,"email":email,"dingtalk":dingtalk,'csrfmiddlewaretoken': getCookie('csrftoken')},
+            url: "/add/alert_rule/",
+            data: {"alert_type":alert_type,"alert_type_value":alert_type_value,"alert_type_rule":alert_type_rule,"alert_value":alert_value,"alert_user":alert_user,'csrfmiddlewaretoken': getCookie('csrftoken')},
             success: function (result) {
 {#                if (result.code!=200) {#}
                     alert(result.msg);

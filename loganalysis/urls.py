@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from loganalysis.view import index,country_loganalysis,country_get,http_code_get,http_code_loganalysis,test,slow_url_loganalysis,slow_url_get,slow_url_domain
-from alert.view import alert_user,add_alert_user,del_alert_user,alert_rule
+from alert.view import alert_user,add_alert_user,del_alert_user,alert_rule,add_alert_rule
 
 urlpatterns = [
     url(r'^$', index),
@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^add/alert_user/$',add_alert_user),
     url(r'^del/alert_user/$',del_alert_user),
     url(r'^alert/rule/$',alert_rule),
+    url(r'^add/alert_rule/$'),add_alert_rule),
 ]
