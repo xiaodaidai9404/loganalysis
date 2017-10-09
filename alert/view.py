@@ -48,7 +48,9 @@ def del_alert_user(request):
 def alert_rule(request):
     return render(request, "homepage/alert_rule.html")
 
+@csrf_exempt
 def add_alert_rule(request):
+    print (1)
     print (request)
     post_data = request.POST
     print (post_data)
