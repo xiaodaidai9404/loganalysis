@@ -51,6 +51,13 @@
            select_obj.options.add(new Option("all","all"));
         }
     }
+
+    function load() {
+       var select_obj = document.getElementById('alert_type_value');
+       select_obj.options.add(new Option("埃及","Egypt"));
+       select_obj.options.add(new Option("沙特","Saudi Arabia"));
+    }
+
     </script>
 {% endblock %}
 {% block content %}
@@ -112,6 +119,7 @@
                 </div>
             </div>
         </div>
+        <body onload="load()"></body>
         </section>
 
     <!-- Modal -->
@@ -130,7 +138,7 @@
                             <label class="col-sm-4 control-label">报警类型</label>
 
                             <div class="col-sm-6">
-                                <select id="alert_type" onclick="write_select()" class="form-control">
+                                <select id="alert_type" onchange="write_select()" class="form-control">
                                     <option id="alert_country" value="country">country</option>
                                     <option id="alert_slow_url" value="slow_url">slow_url</option>
                                     <option id="alert_http_code" value="http_code">http_code</option>
