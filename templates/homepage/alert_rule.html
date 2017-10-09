@@ -35,8 +35,18 @@
         var alert_type = $('#alert_type').val();
         var select_obj = document.getElementById('alert_type_value');
         if (alert_type = "country") {
-            select_obj.options.add(new options("埃及","Egypt"));
-            select_obj.options.add(new options("沙特","Saudi Arabia"));
+            select_obj.options.add(new Option("埃及","Egypt"));
+            select_obj.options.add(new Option("沙特","Saudi Arabia"));
+        }
+        else if (alert_type = "http_code") {
+            select_obj.options.add(new Option("200","200"));
+            select_obj.options.add(new Option("404","404"));
+            select_obj.options.add(new Option("304","304"));
+            select_obj.options.add(new Option("500","500"));
+            select_obj.options.add(new Option("499","499"));
+        }
+        else {
+           select_obj.options.add(new Option("all","all"));
         }
     }
     </script>
