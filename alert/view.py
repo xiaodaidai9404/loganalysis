@@ -32,3 +32,14 @@ def add_alert_user(request):
     else:
         result = json.dumps({"code": 500, "msg": "添加失败"})
     return HttpResponse({"result":result})
+
+def del_alert_user(request):
+    post_data = request.POST
+    name = post_data.get('name')
+    key = "alert_user_" + str(name)
+    redis_action.del_key(key)
+    if redis_action.exists_key(key):
+        result = json.dumps({"code": 500, "msg": "删除失败"})
+    else:
+        result = json.dumps({"code": 200, "msg": "删除成功"})
+    return HttpResponse({"result":result})

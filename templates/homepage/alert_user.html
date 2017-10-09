@@ -67,6 +67,7 @@
                                         <th>微信</th>
                                         <th>邮箱</th>
                                         <th>钉钉</th>
+                                        <th>操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -78,6 +79,7 @@
                                         <td>{{ item.wechat }}</td>
                                         <td>{{ item.email }}</td>
                                         <td>{{ item.dingtalk }}</td>
+                                        <td><button type="submit" class="btn btn-primary" name="" onclick="del_alert_user({{ item.name }})">删除</button></td>
                                         </tr>
                                         {% endfor %}
                                     {% endif %}
@@ -182,14 +184,14 @@
         })
     }
 
-    function del_domain(domain_id) {
+    function del_domain(name) {
         var c = confirm("确定删除？");
         if (c==true) {
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "/domain/del/",
-                data: {"dns_id": domain_id, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+                url: "/del/alert_user/",
+                data: {"name": name, 'csrfmiddlewaretoken': getCookie('csrftoken')},
                 success: function (result) {
                     if (result.code!=200) {
                         alert(result.msg);

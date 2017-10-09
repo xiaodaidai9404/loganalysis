@@ -6,6 +6,9 @@ r = redis.Redis(host='127.0.0.1')
 def search_key(search_date):
     return r.keys(pattern="%s*"%(search_date))
 
+def del_key(key):
+    return r.delete(key)
+
 def exists_key(key):
     return r.exists(key)
 
