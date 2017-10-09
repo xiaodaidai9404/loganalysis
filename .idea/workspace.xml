@@ -77,8 +77,8 @@
       <file leaf-file-name="alert_rule.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/homepage/alert_rule.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="123" column="81" lean-forward="false" selection-start-line="123" selection-start-column="81" selection-end-line="123" selection-end-column="81" />
+            <state relative-caret-position="137">
+              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -585,13 +585,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00136" summary="####">
-      <created>1506329918884</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1506329918884</updated>
-    </task>
     <task id="LOCAL-00137" summary="####">
       <created>1506329991175</created>
       <option name="number" value="00137" />
@@ -928,7 +921,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507540309302</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="####">
+      <created>1507540440190</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1507540440190</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1401,8 +1401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/homepage/alert_rule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="123" column="81" lean-forward="false" selection-start-line="123" selection-start-column="81" selection-end-line="123" selection-end-column="81" />
+        <state relative-caret-position="137">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding />
         </state>
       </provider>
