@@ -34,6 +34,7 @@
     function write_select() {
         var alert_type = $('#alert_type').val();
         var select_obj = document.getElementById('alert_type_value');
+        select_obj.options.length = 0;
         if (alert_type = "country") {
             select_obj.options.add(new Option("埃及","Egypt"));
             select_obj.options.add(new Option("沙特","Saudi Arabia"));
