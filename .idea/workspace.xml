@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f3225177-11e1-4d9c-af49-e2071878e015" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loganalysis/urls.py" afterPath="$PROJECT_DIR$/loganalysis/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alert/view.py" afterPath="$PROJECT_DIR$/alert/view.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -98,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alert/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="64" column="59" lean-forward="false" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+            <state relative-caret-position="373">
+              <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
               <folding>
                 <element signature="e#32#68#0" expanded="true" />
               </folding>
@@ -110,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loganalysis/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
@@ -187,8 +187,8 @@
         <option value="$PROJECT_DIR$/loganalysis/redis_action.py" />
         <option value="$PROJECT_DIR$/templates/homepage/alert_user.html" />
         <option value="$PROJECT_DIR$/templates/homepage/alert_rule.html" />
-        <option value="$PROJECT_DIR$/alert/view.py" />
         <option value="$PROJECT_DIR$/loganalysis/urls.py" />
+        <option value="$PROJECT_DIR$/alert/view.py" />
       </list>
     </option>
   </component>
@@ -591,13 +591,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00148" summary="####">
-      <created>1506393652954</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1506393652954</updated>
-    </task>
     <task id="LOCAL-00149" summary="####">
       <created>1506393805357</created>
       <option name="number" value="00149" />
@@ -934,7 +927,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507547288059</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="####">
+      <created>1507547428411</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1507547428411</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1383,16 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alert/view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="64" column="59" lean-forward="false" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
-          <folding>
-            <element signature="e#32#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1409,6 +1399,16 @@
           <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
           <folding>
             <element signature="e#620#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alert/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding>
+            <element signature="e#32#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
