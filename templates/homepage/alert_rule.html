@@ -36,12 +36,12 @@
     <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            报警联系人
+            报警规则
         </h1>
 
         <ol class="breadcrumb">
           <li class="active"><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
-          <li>联系人列表</li>
+          <li>报警列表</li>
         </ol>
     </section>
 
@@ -59,15 +59,14 @@
                     <div class="tab-content">
                         <div  id="project_manage">
                             <div class="box-body">
-                                <table id="DNSTable" class="table table-bordered table-striped">
+                                <table id="ALERTable" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>姓名</th>
-                                        <th>手机</th>
-                                        <th>微信</th>
-                                        <th>邮箱</th>
-                                        <th>钉钉</th>
-                                        <th>操作</th>
+                                        <th>报警类型</th>
+                                        <th>触发条件</th>
+                                        <th>触发值</th>
+                                        <th>报警方式</th>
+                                        <th>报警联系人</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -106,27 +105,37 @@
                 <div class="tab-pane active">
                     <form class="form-horizontal" method="post" role="form">{% csrf_token %}
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">姓名</label>
+                            <label class="col-sm-4 control-label">报警类型</label>
 
                             <div class="col-sm-6">
-                                <input type="text" id="user" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
-                                       required pattern="[a-zA-Z0-9\.\-_]+">
+                                <select class="form-control">
+                                    <option id="alert_country" value="country">country</option>
+                                    <option id="alert_slow_url" value="slow_url">slow_url</option>
+                                    <option id="alert_http_code" value="http_code">http_code</option>
+                                </select>
                             </div>
-                            <label class="col-sm-4 control-label">手机号</label>
+
+                            <label class="col-sm-4 control-label">报警值</label>
                             <div class="col-sm-6">
-                                <input type="text" id="telephone" class="form-control" placeholder="格式:手机号"
-                                       required pattern="[0-9]+">
+                                <select class="form-control" id="alert_type_value">
+                                </select>
                             </div>
-                            <label class="col-sm-4 control-label">微信号</label>
+                            <label class="col-sm-4 control-label">触发条件</label>
                             <div class="col-sm-6">
-                                <input type="text" id="wechat" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
-                                       required pattern="[a-zA-Z0-9\.\-_]+">
+                                <select class="form-control" id="alert_type_rule">
+                                    <option value="max">大于</option>
+                                    <option value="min">小于</option>
+                                    <option value="yestarday_max">同比大于(前一天)</option>
+                                    <option value="yestarday_min">同比小于(前一天)</option>
+                                    <option value="weekday_max">环比大于(一周前)</option>
+                                    <option value="weekday_min">环比小于(一周前)</option>
+                                </select>
                             </div>
-                            <label class="col-sm-4 control-label">邮箱</label>
+                            <label class="col-sm-4 control-label">触发值</label>
                             <div class="col-sm-6">
-                                <input type="email" id="email" class="form-control" placeholder="email">
+                                <input type="text" id="alert_value" class="form-control" placeholder="报警触发值">
                             </div>
-                            <label class="col-sm-4 control-label">钉钉号</label>
+                            <label class="col-sm-4 control-label">报警联系人</label>
                              <div class="col-sm-6">
                                 <input type="text" id="dingtalk" class="form-control" placeholder="格式:字母、数字或.不能包含空格"
                                        required pattern="[a-zA-Z0-9\.\-_]+">
@@ -162,7 +171,7 @@
 <script type="text/javascript">
     $("#qccrdomain").addClass("active");
     $("#domainconf").addClass("active");
-    $('#DNSTable').DataTable();
+    $('#ALERTable').DataTable();
 
     function add_alert_user() {
         var user = $('#user').val();

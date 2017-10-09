@@ -43,3 +43,7 @@ def del_alert_user(request):
     else:
         result = json.dumps({"code": 200, "msg": "删除成功"})
     return HttpResponse({"result":result})
+
+@csrf_exempt
+def alert_rule(request):
+    return render(request, "homepage/alert_rule.html")
