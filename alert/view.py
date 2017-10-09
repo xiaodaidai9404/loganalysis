@@ -49,6 +49,7 @@ def alert_rule(request):
     return render(request, "homepage/alert_rule.html")
 
 def add_alert_rule(request):
+    print (request)
     post_data = request.POST
     print (post_data)
     alert_type = post_data.get('alert_type')
