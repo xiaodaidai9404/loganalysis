@@ -46,7 +46,8 @@ def del_alert_user(request):
 
 @csrf_exempt
 def alert_rule(request):
-    return render(request, "homepage/alert_rule.html")
+    result = redis_action.get_alert_rule()
+    return render(request, "homepage/alert_rule.html",{"result":result})
 
 @csrf_exempt
 def add_alert_rule(request):
