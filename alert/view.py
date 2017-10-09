@@ -50,6 +50,7 @@ def alert_rule(request):
 
 def add_alert_rule(request):
     post_data = request.POST
+    print (post_data)
     alert_type = post_data.get('alert_type')
     alert_type_value = post_data.get('alert_type_value')
     alert_type_rule = post_data.get('alert_type_rule')
