@@ -66,3 +66,13 @@ def add_alert_rule(request):
     else:
         result = json.dumps({"code": 500, "msg": "添加失败"})
     return HttpResponse({"result": result})
+
+def del_alert_rule(request):
+    post_data = request.POST
+    key = post_data.get('key')
+    redis_action.del_key(key)
+    if redis_action.exists_key(key):
+        result = json.dumps({"code": 500, "msg": "删除失败"})
+    else:
+        result = json.dumps({"code": 200, "msg": "删除成功"})
+    return HttpResponse({"result":result})

@@ -106,7 +106,7 @@
                                         <td>{{ item.alert_value }}</td>
                                         <td>{{ item.alert_type_media }}</td>
                                         <td>{{ item.alert_user }}</td>
-                                        <td><button type="submit" class="btn btn-warning" name="" onclick="del_alert_user({{ item.name }})">删除</button></td>
+                                        <td><button type="submit" class="btn btn-warning" name="" onclick="del_alert_rule({{ item.key }})">删除</button></td>
                                         </tr>
                                         {% endfor %}
                                     {% endif %}
@@ -228,20 +228,20 @@
                 if (result.code!=200) {
                     alert(result.msg);
                 }
-                window.location.href = "/";
-                location.reload(true);
+            window.location.href = "/";
+            location.reload(true);
             }
         })
     }
 
-    function del_domain(name) {
+    function del_alert_rule(key) {
         var c = confirm("确定删除？");
         if (c==true) {
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "/del/alert_user/",
-                data: {"name": name, 'csrfmiddlewaretoken': getCookie('csrftoken')},
+                url: "/del/alert_rule/",
+                data: {"key": key, 'csrfmiddlewaretoken': getCookie('csrftoken')},
                 success: function (result) {
                     if (result.code!=200) {
                         alert(result.msg);
