@@ -31,7 +31,7 @@ def add_alert_user(request):
         result = json.dumps({"code": 200, "msg": "添加成功"})
     else:
         result = json.dumps({"code": 500, "msg": "添加失败"})
-    return HttpResponse({"result":result})
+    return HttpResponse(result)
 
 def del_alert_user(request):
     post_data = request.POST
@@ -42,7 +42,7 @@ def del_alert_user(request):
         result = json.dumps({"code": 500, "msg": "删除失败"})
     else:
         result = json.dumps({"code": 200, "msg": "删除成功"})
-    return HttpResponse({"result":result})
+    return HttpResponse(result)
 
 @csrf_exempt
 def alert_rule(request):
@@ -65,7 +65,7 @@ def add_alert_rule(request):
         result = json.dumps({"code": 200, "msg": "添加成功"})
     else:
         result = json.dumps({"code": 500, "msg": "添加失败"})
-    return HttpResponse({"result": result})
+    return HttpResponse(result)
 
 @csrf_exempt
 def del_alert_rule(request):
@@ -77,5 +77,4 @@ def del_alert_rule(request):
         result = json.dumps({"code": 500, "msg": "删除失败"})
     else:
         result = json.dumps({"code": 200, "msg": "删除成功"})
-    print (result)
-    return HttpResponse({"result":result})
+    return HttpResponse(result)
