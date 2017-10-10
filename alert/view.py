@@ -67,8 +67,10 @@ def add_alert_rule(request):
         result = json.dumps({"code": 500, "msg": "添加失败"})
     return HttpResponse({"result": result})
 
+@csrf_exempt
 def del_alert_rule(request):
     post_data = request.POST
+    print (post_data)
     key = post_data.get('key')
     redis_action.del_key(key)
     if redis_action.exists_key(key):
