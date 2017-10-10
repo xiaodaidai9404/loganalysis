@@ -154,10 +154,10 @@
                                 <select class="form-control" id="alert_type_rule">
                                     <option value="max">大于</option>
                                     <option value="min">小于</option>
-                                    <option value="yestarday_max">同比大于(前一天)</option>
-                                    <option value="yestarday_min">同比小于(前一天)</option>
-                                    <option value="weekday_max">环比大于(一周前)</option>
-                                    <option value="weekday_min">环比小于(一周前)</option>
+                                    <option value="yestarday-max">同比大于(前一天)</option>
+                                    <option value="yestarday-min">同比小于(前一天)</option>
+                                    <option value="weekday-max">环比大于(一周前)</option>
+                                    <option value="weekday-min">环比小于(一周前)</option>
                                 </select>
                             </div>
                             <label class="col-sm-4 control-label">触发值</label>
@@ -228,7 +228,6 @@
                 if (result.code!=200) {
                     alert(result.msg);
                 }
-            console.log(result);
             window.location.href = "/";
             location.reload(true);
             }
@@ -244,10 +243,9 @@
                 url: "/del/alert_rule/",
                 data: {"key": key, 'csrfmiddlewaretoken': getCookie('csrftoken')},
                 success: function (result) {
-{#                    if (result.code!=200) {#}
+                    if (result.code!=200) {
                         alert(result.msg);
-{#                    }#}
-                    console.log(result),
+                    }
                 window.location.href = "/";
                 location.reload(true);
                 }
