@@ -243,9 +243,9 @@
                 url: "/del/alert_rule/",
                 data: {"key": key, 'csrfmiddlewaretoken': getCookie('csrftoken')},
                 success: function (result) {
-                    if (result.code!=200) {
+{#                    if (result.code!=200) {#}
                         alert(result.msg);
-                    }
+{#                    }#}
                 window.location.href = "/";
                 location.reload(true);
                 }

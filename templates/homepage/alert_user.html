@@ -79,7 +79,7 @@
                                         <td>{{ item.wechat }}</td>
                                         <td>{{ item.email }}</td>
                                         <td>{{ item.dingtalk }}</td>
-                                        <td><button type="button" class="btn btn-warning" name="" onclick="del_alert_user({{ item.name }})">删除</button></td>
+                                        <td><button type="button" class="btn btn-warning" name="" onclick="del_alert_user('{{ item.name }}')">删除</button></td>
                                         </tr>
                                         {% endfor %}
                                     {% endif %}
