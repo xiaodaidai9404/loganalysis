@@ -106,7 +106,7 @@
                                         <td>{{ item.alert_value }}</td>
                                         <td>{{ item.alert_type_media }}</td>
                                         <td>{{ item.alert_user }}</td>
-                                        <td><button type="submit" class="btn btn-warning" name="" onclick="del_alert_rule({{ item.key }})">删除</button></td>
+                                            <td><button type="submit" class="btn btn-warning" onclick="del_alert_rule({{ item.key }})">删除</button></td>
                                         </tr>
                                         {% endfor %}
                                     {% endif %}
