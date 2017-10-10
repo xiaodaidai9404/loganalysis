@@ -77,4 +77,5 @@ def del_alert_rule(request):
         result = json.dumps({"code": 500, "msg": "删除失败"})
     else:
         result = json.dumps({"code": 200, "msg": "删除成功"})
+    print (result)
     return HttpResponse({"result":result})
