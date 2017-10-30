@@ -65,6 +65,7 @@ def add_alert_rule(request):
         result = json.dumps({"code": 200, "msg": "添加成功"})
     else:
         result = json.dumps({"code": 500, "msg": "添加失败"})
+    print (result)
     return HttpResponse(result)
 
 @csrf_exempt

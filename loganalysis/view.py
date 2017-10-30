@@ -63,3 +63,6 @@ def slow_url_get(request):
     result = redis_action.get_domain_slow_url(key)
     print (result)
     return HttpResponse(json.dumps({"code": 200, "result": result}))
+
+def test(request):
+    return render(request, 'homepage/echarts.html')
