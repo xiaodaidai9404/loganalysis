@@ -25,7 +25,7 @@
         trigger: 'axis'
     },
     legend: {
-        data:{{ country }}
+        data:{{ country|safe}}
     },
     grid: {
         left: '3%',
@@ -41,41 +41,41 @@
     xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: {{ weekday_day }}
+        data: {{ weekday_day|safe }}
     },
     yAxis: {
         type: 'value'
     },
     series: [
         {
-            name:{{ country1 }},
+            name:{{ country1|safe }},
             type:'line',
             stack: '总量',
-            data:{{ country1_access_list }}
+            data:{{ country1_access_list|safe }}
         },
         {
-            name:{{ country2 }},
+            name:{{ country2|safe }},
             type:'line',
             stack: '总量',
-            data:{{ country2_access_list }}
+            data:{{ country2_access_list|safe }}
         },
         {
-            name:{{ country3 }},
+            name:{{ country3|safe }},
             type:'line',
             stack: '总量',
-            data:{{ country3_access_list }}
+            data:{{ country3_access_list|safe }}
         },
         {
-            name:{{ country4 }},
+            name:{{ country4|safe }},
             type:'line',
             stack: '总量',
-            data:{{ country4_access_list }}
+            data:{{ country4_access_list|safe }}
         },
         {
-            name:{{ country5 }},
+            name:{{ country5|safe }},
             type:'line',
             stack: '总量',
-            data:{{ country5_access_list }}
+            data:{{ country5_access_list|safe }}
         }
     ]
 };
