@@ -57,8 +57,8 @@
       <file leaf-file-name="redis_action.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="185" column="7" lean-forward="true" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
+            <state relative-caret-position="398">
+              <caret line="196" column="23" lean-forward="true" selection-start-line="196" selection-start-column="23" selection-end-line="196" selection-end-column="23" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -618,13 +618,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00185" summary="####">
-      <created>1507540440190</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1507540440190</updated>
-    </task>
     <task id="LOCAL-00186" summary="####">
       <created>1507540559235</created>
       <option name="number" value="00186" />
@@ -961,7 +954,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509439716553</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="####">
+      <created>1509439939204</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1509439939205</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1453,8 +1453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loganalysis/redis_action.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="185" column="7" lean-forward="true" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
+        <state relative-caret-position="398">
+          <caret line="196" column="23" lean-forward="true" selection-start-line="196" selection-start-column="23" selection-end-line="196" selection-end-column="23" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

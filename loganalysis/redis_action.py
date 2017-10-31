@@ -185,9 +185,9 @@ def get_day_7_list():
 
 #获取国家列表
 def get_country_list():
-    date_time = datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d')
-    yes_time = date_time - datetime.timedelta(days=1)
-    yes_date = yes_time.strftime('%Y-%m-%d')
+    today = datetime.date.today()
+    oneday = datetime.timedelta(days=int(num))
+    yes_date = today - oneday
     date_key = str(yes_date) + "_country_"
     key_list = search_key(date_key)
     country_list = [ key.split('_')[2] for key in key_list ]
