@@ -190,7 +190,7 @@ def get_country_list():
     yes_date = today - oneday
     date_key = str(yes_date) + "_country_"
     key_list = search_key(date_key)
-    print key_list
+    print (key_list)
     country_list = [ key.split('_')[2] for key in key_list ]
     return country_list
 
