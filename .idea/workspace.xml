@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
-              <caret line="99" column="282" lean-forward="false" selection-start-line="99" selection-start-column="282" selection-end-line="99" selection-end-column="282" />
+              <caret line="99" column="415" lean-forward="false" selection-start-line="99" selection-start-column="415" selection-end-line="99" selection-end-column="415" />
               <folding>
                 <element signature="e#32#68#0" expanded="true" />
               </folding>
@@ -618,13 +618,6 @@
       <option name="presentableId" value="Default" />
       <updated>1499930956552</updated>
     </task>
-    <task id="LOCAL-00194" summary="####">
-      <created>1507542487169</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1507542487169</updated>
-    </task>
     <task id="LOCAL-00195" summary="####">
       <created>1507546412398</created>
       <option name="number" value="00195" />
@@ -961,7 +954,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509443319772</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="####">
+      <created>1509449233794</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1509449233794</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1454,7 +1454,7 @@
     <entry file="file://$PROJECT_DIR$/loganalysis/view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
-          <caret line="99" column="282" lean-forward="false" selection-start-line="99" selection-start-column="282" selection-end-line="99" selection-end-column="282" />
+          <caret line="99" column="415" lean-forward="false" selection-start-line="99" selection-start-column="415" selection-end-line="99" selection-end-column="415" />
           <folding>
             <element signature="e#32#68#0" expanded="true" />
           </folding>
