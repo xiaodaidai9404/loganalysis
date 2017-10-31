@@ -85,20 +85,23 @@ def echarts_make(request):
 
     for item in sorted(country_data_list[0].keys()):
         country1_access_list.append(country_data_list[0][item])
+        country1_access_list = [bytes.decode(key) for key in country1_access_list]
 
     for item in sorted(country_data_list[1].keys()):
         country2_access_list.append(country_data_list[0][item])
+        country2_access_list = [bytes.decode(key) for key in country2_access_list]
 
     for item in sorted(country_data_list[2].keys()):
         country3_access_list.append(country_data_list[0][item])
+        country3_access_list = [bytes.decode(key) for key in country3_access_list]
 
     for item in sorted(country_data_list[3].keys()):
         country4_access_list.append(country_data_list[0][item])
+        country4_access_list = [bytes.decode(key) for key in country4_access_list]
 
     for item in sorted(country_data_list[4].keys()):
         country5_access_list.append(country_data_list[0][item])
-    print (weekday_day)
-    print (country)
-    print (country1)
+        country5_access_list = [bytes.decode(key) for key in country5_access_list]
+
     print (country1_access_list)
     return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,"country1":country1,"country2":country2,"country3":country3,"country4":country4,"country5":country5,"country1_access_list":country1_access_list,"country2_access_list":country2_access_list,"country3_access_list":country3_access_list,"country4_access_list":country4_access_list,"country5_access_list":country5_access_list})
