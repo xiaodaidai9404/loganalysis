@@ -180,7 +180,7 @@ def get_day_7_list():
     for num in range(1,8):
         oneday = datetime.timedelta(days=int(num))
         yesterday = today - oneday
-    date_7_list.append(str(yesterday))
+        date_7_list.append(str(yesterday))
     return date_7_list
 
 #获取国家列表
