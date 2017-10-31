@@ -206,6 +206,10 @@ def get_country_data():
         for num in date_7_list:
             key = str(num)+"_country_"+country
             value = get_redis(key)
+            if value is None:
+                value = 0
+            else:
+                value = bytes.decode(value)
             country_dist[num] = value
         country_data_list.append(country_dist)
     return country_data_list
