@@ -68,7 +68,33 @@ def echarts_make(request):
     weekday_day = redis_action.get_day_7_list()
     country = redis_action.get_country_list()
     country_data_list = redis_action.get_country_data()
-    print (weekday_day)
-    print (country)
-    print (country_data_list)
-    return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,"country_data_list":country_data_list})
+    country1 = country_data_list[0]['country']
+    country2 = country_data_list[1]['country']
+    country3 = country_data_list[2]['country']
+    country4 = country_data_list[3]['country']
+    country5 = country_data_list[4]['country']
+
+    for num in range(0, 5):
+        del country_data_list[num]['country']
+
+    country1_access_list = []
+    country2_access_list = []
+    country3_access_list = []
+    country4_access_list = []
+    country5_access_list = []
+
+    for item in sorted(country_data_list[0].keys()):
+        country1_access_list.append(country_data_list[0][item])
+
+    for item in sorted(country_data_list[1].keys()):
+        country2_access_list.append(country_data_list[0][item])
+
+    for item in sorted(country_data_list[2].keys()):
+        country3_access_list.append(country_data_list[0][item])
+
+    for item in sorted(country_data_list[3].keys()):
+        country4_access_list.append(country_data_list[0][item])
+
+    for item in sorted(country_data_list[4].keys()):
+        country5_access_list.append(country_data_list[0][item])
+    return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,"country1":country1,"country2":country2,"country3":country3,"country4":country4,"country5":country5,"country1_access_list":country1_access_list,"country2_access_list":country2_access_list,"country3_access_list":country3_access_list,"country4_access_list":country4_access_list,"country5_access_list":country5_access_list)
