@@ -204,7 +204,7 @@ def get_country_data():
         country_dist= {}
         country_dist['country'] = country
         for num in date_7_list:
-            key = str(num)+"_country"+country
+            key = str(num)+"_country_"+country
             value = get_redis(key)
             country_dist[num] = value
         country_data_list.append(country_dist)
