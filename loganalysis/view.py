@@ -68,4 +68,7 @@ def echarts_make(request):
     weekday_day = redis_action.get_day_7_list()
     country = redis_action.get_country_list()
     country_data_list = redis_action.get_country_data()
+    print (weekday_day)
+    print (country)
+    print (country_data_list)
     return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,"country_data_list":country_data_list})
