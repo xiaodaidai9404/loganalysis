@@ -64,5 +64,8 @@ def slow_url_get(request):
     print (result)
     return HttpResponse(json.dumps({"code": 200, "result": result}))
 
-def test(request):
-    return render(request, 'homepage/echarts.html')
+def echarts_make(request):
+    weekday_day = redis_action.get_day_7_list()
+    country = redis_action.get_country_list()
+    country_data_list = redis_action.get_country_data()
+    return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,"country_data_list":country_data_list})

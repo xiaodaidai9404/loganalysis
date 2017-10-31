@@ -169,3 +169,43 @@ def get_alert_rule():
     return List
 
 
+
+####echarts
+
+#获取7天内的日期
+def get_day_7_list():
+
+    date_7_list = []
+    date_time = datetime.datetime.strftime(datetime.datetime.now(),'%Y-%m-%d')
+    for num in range(1,7):
+        yes_time = date_time - datetime.timedelta(days=num)
+        yes_date = yes_time.strftime('%Y-%m-%d')
+    date_7_list.append(num)
+    return date_7_list
+
+#获取国家列表
+def get_country_list():
+    date_time = datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d')
+    yes_time = date_time - datetime.timedelta(days=1)
+    yes_date = yes_time.strftime('%Y-%m-%d')
+    date_key = str(yes_date) + "_country_"
+    key_list = search_key(date_key)
+    country_list = [ key.split('_')[2] for key in key_list ]
+    return country_list
+
+##获取每个国家7天的数据
+def get_country_data():
+    date_7_list = get_day_7_list()
+    country_list = get_country_list()
+
+    country_data_list = []
+    for country in country_list:
+        country_dist= {}
+        country_dist['country'] = country
+        for num in date_7_list:
+            key = str(num)+"_country"+country
+            value = get_redis(key)
+            country_dist[num] = value
+        country_data_list.append(country_dist)
+    return country_data_list
+

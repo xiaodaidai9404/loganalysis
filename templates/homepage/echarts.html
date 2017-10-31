@@ -19,22 +19,66 @@
         // 指定图表的配置项和数据
         var option = {
             title: {
-                text: 'ECharts 入门示例'
+            text: '国家'
             },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        };
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:{{ country }}
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: {{ weekday_day }}
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:{{ country1 }},
+            type:'line',
+            stack: '总量',
+            data:{{ country1_access_list }}
+        },
+        {
+            name:{{ country2 }},
+            type:'line',
+            stack: '总量',
+            data:{{ country2_access_list }}
+        },
+        {
+            name:{{ country3 }},
+            type:'line',
+            stack: '总量',
+            data:{{ country3_access_list }}
+        },
+        {
+            name:{{ country4 }},
+            type:'line',
+            stack: '总量',
+            data:{{ country4_access_list }}
+        },
+        {
+            name:{{ country5 }},
+            type:'line',
+            stack: '总量',
+            data:{{ country5_access_list }}
+        }
+    ]
+};
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);

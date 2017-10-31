@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from loganalysis.view import index,country_loganalysis,country_get,http_code_get,http_code_loganalysis,test,slow_url_loganalysis,slow_url_get,slow_url_domain
+from loganalysis.view import index,country_loganalysis,country_get,http_code_get,http_code_loganalysis,test,slow_url_loganalysis,slow_url_get,slow_url_domain,echarts_make
 from alert.view import alert_user,add_alert_user,del_alert_user,alert_rule,add_alert_rule,del_alert_rule
 
 urlpatterns = [
     url(r'^$', index),
-    url(r'^test/$',test),
+    url(r'^echat_make/$',echarts_make),
     url(r'^loganalysis/country/$', country_loganalysis),
     url(r'^get/country/$', country_get),
     url(r'^loganalysis/httpcode/$',http_code_loganalysis),
