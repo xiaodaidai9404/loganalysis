@@ -191,7 +191,7 @@ def get_country_list():
     date_key = str(yes_date) + "_country_"
     key_list = search_key(date_key)
     print (key_list)
-    country_list = [ key.split('_')[2] for key in key_list ]
+    country_list = [ bytes.decode(key).split('_')[2] for key in key_list ]
     return country_list
 
 ##获取每个国家7天的数据
@@ -205,7 +205,7 @@ def get_country_data():
         country_dist['country'] = country
         for num in date_7_list:
             key = str(num)+"_country"+country
-            value = get_redis(key)
+            value = bytes.decode(get_redis(key))
             country_dist[num] = value
         country_data_list.append(country_dist)
     return country_data_list
