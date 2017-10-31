@@ -88,19 +88,19 @@ def echarts_make(request):
         # country1_access_list = [bytes.decode(key) for key in country1_access_list]
 
     for item in sorted(country_data_list[1].keys()):
-        country2_access_list.append(country_data_list[0][item])
+        country2_access_list.append(country_data_list[1][item])
         # country2_access_list = [bytes.decode(key) for key in country2_access_list]
 
     for item in sorted(country_data_list[2].keys()):
-        country3_access_list.append(country_data_list[0][item])
+        country3_access_list.append(country_data_list[2][item])
         # country3_access_list = [bytes.decode(key) for key in country3_access_list]
 
     for item in sorted(country_data_list[3].keys()):
-        country4_access_list.append(country_data_list[0][item])
+        country4_access_list.append(country_data_list[3][item])
         # country4_access_list = [bytes.decode(key) for key in country4_access_list]
 
     for item in sorted(country_data_list[4].keys()):
-        country5_access_list.append(country_data_list[0][item])
+        country5_access_list.append(country_data_list[4][item])
         # country5_access_list = [bytes.decode(key) for key in country5_access_list]
 
     print (country1_access_list)
