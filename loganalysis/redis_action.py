@@ -176,11 +176,11 @@ def get_alert_rule():
 def get_day_7_list():
 
     date_7_list = []
-    date_time = datetime.datetime.strftime(datetime.datetime.now(),'%Y-%m-%d')
+    today = datetime.date.today()
     for num in range(1,7):
-        yes_time = date_time - datetime.timedelta(days=num)
-        yes_date = yes_time.strftime('%Y-%m-%d')
-    date_7_list.append(num)
+        oneday = datetime.timedelta(days=num)
+        yesterday = today - oneday
+    date_7_list.append(yesterday)
     return date_7_list
 
 #获取国家列表
