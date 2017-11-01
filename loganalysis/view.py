@@ -75,10 +75,7 @@ def echarts_make(request):
     for num in range(0, 5):
         del country_data_list[num]['country']
 
-    country1_access_list,country2_access_list,country3_access_list,country4_access_list,country5_access_list = []
-
     country_access_list = []
-
 
     for num in range(0,5):
         country_access_tmp_list = []
