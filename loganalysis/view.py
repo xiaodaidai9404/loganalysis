@@ -68,40 +68,45 @@ def echarts_make(request):
     weekday_day = redis_action.get_day_7_list()
     country = redis_action.get_country_list()
     country_data_list = redis_action.get_country_data()
-    country1 = country_data_list[0]['country']
-    country2 = country_data_list[1]['country']
-    country3 = country_data_list[2]['country']
-    country4 = country_data_list[3]['country']
-    country5 = country_data_list[4]['country']
+    country_list = []
+    for num in range(0,5):
+        country_list.append(country_data_list[num]['country'])
 
     for num in range(0, 5):
         del country_data_list[num]['country']
 
-    country1_access_list = []
-    country2_access_list = []
-    country3_access_list = []
-    country4_access_list = []
-    country5_access_list = []
+    country1_access_list,country2_access_list,country3_access_list,country4_access_list,country5_access_list = []
 
-    for item in sorted(country_data_list[0].keys(),reverse=True):
-        country1_access_list.append(country_data_list[0][item])
-        # country1_access_list = [bytes.decode(key) for key in country1_access_list]
+    country_access_list,country_access_tmp_list = []
 
-    for item in sorted(country_data_list[1].keys(),reverse=True):
-        country2_access_list.append(country_data_list[1][item])
-        # country2_access_list = [bytes.decode(key) for key in country2_access_list]
 
-    for item in sorted(country_data_list[2].keys(),reverse=True):
-        country3_access_list.append(country_data_list[2][item])
-        # country3_access_list = [bytes.decode(key) for key in country3_access_list]
+    for num in range(0,5):
+        for item in sorted(country_data_list[num].keys(), reverse=True):
+            country_access_tmp_list.append(country_data_list[num][item])
+        country_access_list.append(country_access_tmp_list)
+        country_access_tmp_list = []
 
-    for item in sorted(country_data_list[3].keys(),reverse=True):
-        country4_access_list.append(country_data_list[3][item])
-        # country4_access_list = [bytes.decode(key) for key in country4_access_list]
-
-    for item in sorted(country_data_list[4].keys(),reverse=True):
-        country5_access_list.append(country_data_list[4][item])
-        # country5_access_list = [bytes.decode(key) for key in country5_access_list]
+    # for item in sorted(country_data_list[0].keys(),reverse=True):
+    #     country1_access_list.append(country_data_list[0][item])
+    #     # country1_access_list = [bytes.decode(key) for key in country1_access_list]
+    #
+    # for item in sorted(country_data_list[1].keys(),reverse=True):
+    #     country2_access_list.append(country_data_list[1][item])
+    #     # country2_access_list = [bytes.decode(key) for key in country2_access_list]
+    #
+    # for item in sorted(country_data_list[2].keys(),reverse=True):
+    #     country3_access_list.append(country_data_list[2][item])
+    #     # country3_access_list = [bytes.decode(key) for key in country3_access_list]
+    #
+    # for item in sorted(country_data_list[3].keys(),reverse=True):
+    #     country4_access_list.append(country_data_list[3][item])
+    #     # country4_access_list = [bytes.decode(key) for key in country4_access_list]
+    #
+    # for item in sorted(country_data_list[4].keys(),reverse=True):
+    #     country5_access_list.append(country_data_list[4][item])
+    #     # country5_access_list = [bytes.decode(key) for key in country5_access_list]
 
     print (country1_access_list)
-    return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,"country1":country1,"country2":country2,"country3":country3,"country4":country4,"country5":country5,"country1_access_list":country1_access_list,"country2_access_list":country2_access_list,"country3_access_list":country3_access_list,"country4_access_list":country4_access_list,"country5_access_list":country5_access_list})
+    return render(request,"homepage/echarts.html",{"weekday_day":weekday_day,"country":country,
+                                                   "country1":country_list[0],"country2":country_list[1],"country3":country_list[2],"country4":country_list[3],"country5":country_list[4],
+                                                   "country1_access_list":country_access_list[0],"country2_access_list":country_access_list[1],"country3_access_list":country_access_list[2],"country4_access_list":country_access_list[3],"country5_access_list":country_access_list[4]})
