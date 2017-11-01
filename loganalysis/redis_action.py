@@ -207,7 +207,7 @@ def get_country_data():
             key = str(num)+"_country_"+country
             value = get_redis(key)
             if value is None:
-                value = 100
+                value = 0
             else:
                 value = bytes.decode(value)
             country_dist[num] = value
